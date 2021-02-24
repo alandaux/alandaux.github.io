@@ -2,7 +2,6 @@
 
 #### I'm a student at Middlebury College studying Environmental Justice and Computer Science. I hope to use emerging open source technologies to advance social justice oriented goals.
 
-######
 Relevant Course Work:
 - Human Geography with GIS
 - Software Development
