@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>Gravity Model of Spatial Interaction: New England Hospitals Case Study</title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/HospitalCatchments_1.js"></script>
+        <script src="data/DartmouthAtlasHSAs_2.js"></script>
+        <script src="data/NewEnglandHospitals_3.js"></script>
+        <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+            highlightLayer.openPopup();
+        }
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        })
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://alandaux.github.io" target="_blank">Arielle Landau</a> &middot; <a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var measureControl = new L.Control.Measure({
+            position: 'topleft',
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'sqmeters',
+            secondaryAreaUnit: 'hectares'
+        });
+        measureControl.addTo(map);
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .innerHTML = '';
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .className += ' fas fa-ruler';
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+            if (bounds_group.getLayers().length) {
+                map.fitBounds(bounds_group.getBounds());
+            }
+        }
+        map.createPane('pane_OSMStandard_0');
+        map.getPane('pane_OSMStandard_0').style.zIndex = 400;
+        var layer_OSMStandard_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_OSMStandard_0',
+            opacity: 1.0,
+            attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        });
+        layer_OSMStandard_0;
+        map.addLayer(layer_OSMStandard_0);
+        function pop_HospitalCatchments_1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">Hospital Name: ' + (feature.properties['TargetID'] !== null ? autolinker.link(feature.properties['TargetID'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">Number of Beds: ' + (feature.properties['TargetWeig'] !== null ? autolinker.link(feature.properties['TargetWeig'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">Population Served: ' + (feature.properties['SumInputWe'] !== null ? autolinker.link(feature.properties['SumInputWe'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_HospitalCatchments_1_0() {
+            return {
+                pane: 'pane_HospitalCatchments_1',
+                opacity: 1,
+                color: 'rgba(219,94,94,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_HospitalCatchments_1');
+        map.getPane('pane_HospitalCatchments_1').style.zIndex = 401;
+        map.getPane('pane_HospitalCatchments_1').style['mix-blend-mode'] = 'normal';
+        var layer_HospitalCatchments_1 = new L.geoJson(json_HospitalCatchments_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_HospitalCatchments_1',
+            layerName: 'layer_HospitalCatchments_1',
+            pane: 'pane_HospitalCatchments_1',
+            onEachFeature: pop_HospitalCatchments_1,
+            style: style_HospitalCatchments_1_0,
+        });
+        bounds_group.addLayer(layer_HospitalCatchments_1);
+        map.addLayer(layer_HospitalCatchments_1);
+        function pop_DartmouthAtlasHSAs_2(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">HSA Name: ' + (feature.properties['HSANAME'] !== null ? autolinker.link(feature.properties['HSANAME'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                    </tr>\
+                    <tr>\
+                    </tr>\
+                    <tr>\
+                    </tr>\
+                    <tr>\
+                    </tr>\
+                    <tr>\
+                    </tr>\
+                    <tr>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_DartmouthAtlasHSAs_2_0() {
+            return {
+                pane: 'pane_DartmouthAtlasHSAs_2',
+                opacity: 1,
+                color: 'rgba(232,180,25,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_DartmouthAtlasHSAs_2');
+        map.getPane('pane_DartmouthAtlasHSAs_2').style.zIndex = 402;
+        map.getPane('pane_DartmouthAtlasHSAs_2').style['mix-blend-mode'] = 'normal';
+        var layer_DartmouthAtlasHSAs_2 = new L.geoJson(json_DartmouthAtlasHSAs_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_DartmouthAtlasHSAs_2',
+            layerName: 'layer_DartmouthAtlasHSAs_2',
+            pane: 'pane_DartmouthAtlasHSAs_2',
+            onEachFeature: pop_DartmouthAtlasHSAs_2,
+            style: style_DartmouthAtlasHSAs_2_0,
+        });
+        bounds_group.addLayer(layer_DartmouthAtlasHSAs_2);
+        map.addLayer(layer_DartmouthAtlasHSAs_2);
+        function pop_NewEnglandHospitals_3(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                    </tr>\
+                    <tr>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NAME</th>\
+                        <td>' + (feature.properties['NAME'] !== null ? autolinker.link(feature.properties['NAME'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">Population: ' + (feature.properties['POPULATION'] !== null ? autolinker.link(feature.properties['POPULATION'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">BEDS</th>\
+                        <td>' + (feature.properties['BEDS'] !== null ? autolinker.link(feature.properties['BEDS'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_NewEnglandHospitals_3_0() {
+            return {
+                pane: 'pane_NewEnglandHospitals_3',
+                radius: 2.0000000000000004,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(86,153,186,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_NewEnglandHospitals_3');
+        map.getPane('pane_NewEnglandHospitals_3').style.zIndex = 403;
+        map.getPane('pane_NewEnglandHospitals_3').style['mix-blend-mode'] = 'normal';
+        var layer_NewEnglandHospitals_3 = new L.geoJson(json_NewEnglandHospitals_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_NewEnglandHospitals_3',
+            layerName: 'layer_NewEnglandHospitals_3',
+            pane: 'pane_NewEnglandHospitals_3',
+            onEachFeature: pop_NewEnglandHospitals_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_NewEnglandHospitals_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_NewEnglandHospitals_3);
+        map.addLayer(layer_NewEnglandHospitals_3);
+            var title = new L.Control();
+            title.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info');
+                this.update();
+                return this._div;
+            };
+            title.update = function () {
+                this._div.innerHTML = '<h2>Gravity Model of Spatial Interaction: New England Hospitals Case Study</h2>';
+            };
+            title.addTo(map);
+            var abstract = new L.Control({'position':'bottomleft'});
+            abstract.onAdd = function (map) {
+                this._div = L.DomUtil.create('div',
+                'leaflet-control abstract');
+                this._div.id = 'abstract'
+                    this._div.setAttribute("onmouseenter", "abstract.show()");
+                    this._div.setAttribute("onmouseleave", "abstract.hide()");
+                    this.hide();
+                    return this._div;
+                };
+                abstract.hide = function () {
+                    this._div.classList.remove("abstractUncollapsed");
+                    this._div.classList.add("abstract");
+                    this._div.innerHTML = 'i'
+                }
+                abstract.show = function () {
+                    this._div.classList.remove("abstract");
+                    this._div.classList.add("abstractUncollapsed");
+                    this._div.innerHTML = 'This map identified the differences between the Datmouth Atlas\'s model of Hospital Service Areas, and hospital service areas identified by a gravity model of spatial interaction produced by Arielle Landau with help from the Middlebury College Open Source GIScience Class of Spring 2021.';
+            };
+            abstract.addTo(map);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/NewEnglandHospitals_3.png" /> NewEnglandHospitals': layer_NewEnglandHospitals_3,'<img src="legend/DartmouthAtlasHSAs_2.png" /> DartmouthAtlasHSAs': layer_DartmouthAtlasHSAs_2,'<img src="legend/HospitalCatchments_1.png" /> HospitalCatchments': layer_HospitalCatchments_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>
