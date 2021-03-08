@@ -32,7 +32,7 @@ was put together by Joe Holler.
 
 **You find the comparison between my gravity model of spatial interaction for
 hospital service areas in New England and the Dartmouth Atlas of Health care
-[here](assets/index.html). **
+[here](assets/index.html).** 
 
 Although there are some similarities between the output of my model and the
 Dartmouth Atlas of Health Care's geographic boundaries, there is still a lot of
