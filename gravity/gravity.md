@@ -39,10 +39,10 @@ Dartmouth Atlas of Health Care's geographic boundaries, there is still a lot of
 room for the accuracy of my model to be improved. 
 
 **Summary of data sources:**
-*[HSA Hospital Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/6ac5e325468c4cb9b905f1728d6fbf0f_0)
-*[ACS data](https://gis4dev.github.io/lessons/assets/netown.gpkg)
-*[Dartmouth Atlas of Health Care Hospital Service Areas] (https://atlasdata.dartmouth.edu/downloads/supplemental#boundaries)
+* [HSA Hospital Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/6ac5e325468c4cb9b905f1728d6fbf0f_0)
+* [ACS data](https://gis4dev.github.io/lessons/assets/netown.gpkg)
+* [Dartmouth Atlas of Health Care Hospital Service Areas](https://atlasdata.dartmouth.edu/downloads/supplemental#boundaries)
 
 **Complete Models:**
-*[Gravity Model of Spatial Interaction](assets/GravityModel.model3)
-*[HSA Hospitals Pre-Processing Model](assets/HSAPreProcessModel.model3)
+* [Gravity Model of Spatial Interaction](assets/GravityModel.model3)
+* [HSA Hospitals Pre-Processing Model](assets/HSAPreProcessModel.model3)
