@@ -30,9 +30,9 @@ the American Community Survey 2018 5 year average was the input layer, with
 population as the weight field. The ACS [data](https://gis4dev.github.io/lessons/assets/netown.gpkg)
 was put together by Joe Holler.
 
-You find the comparison between my gravity model of spatial interaction for
+**You find the comparison between my gravity model of spatial interaction for
 hospital service areas in New England and the Dartmouth Atlas of Health care
-[here](assets/index.html).
+[here](assets/index.html). **
 
 Although there are some similarities between the output of my model and the
 Dartmouth Atlas of Health Care's geographic boundaries, there is still a lot of
