@@ -3,6 +3,8 @@ layout: page
 title: Gravity Model of Spatial Interaction
 ---
 
+**Tldr: [the final product!](assets/index.html)**
+
 A [gravity model](assets/GravityModel.model3) of spatial interaction model was created for the purpose of
 identifying the potential interaction between two places. The model uses
 three variables to calculate potential interaction: the weight/attractiveness
