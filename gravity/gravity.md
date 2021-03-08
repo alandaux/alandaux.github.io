@@ -32,8 +32,17 @@ was put together by Joe Holler.
 
 **You find the comparison between my gravity model of spatial interaction for
 hospital service areas in New England and the Dartmouth Atlas of Health care
-[here](assets/index.html).** 
+[here](assets/index.html).**
 
 Although there are some similarities between the output of my model and the
 Dartmouth Atlas of Health Care's geographic boundaries, there is still a lot of
 room for the accuracy of my model to be improved. 
+
+**Summary of data sources:**
+*[HSA Hospital Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/6ac5e325468c4cb9b905f1728d6fbf0f_0)
+*[ACS data](https://gis4dev.github.io/lessons/assets/netown.gpkg)
+*[Dartmouth Atlas of Health Care Hospital Service Areas] (https://atlasdata.dartmouth.edu/downloads/supplemental#boundaries)
+
+**Complete Models:**
+*[Gravity Model of Spatial Interaction](assets/GravityModel.model3)
+*[HSA Hospitals Pre-Processing Model](assets/HSAPreProcessModel.model3)
