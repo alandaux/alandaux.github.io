@@ -17,7 +17,4 @@ Relevant Course Work:
 
 [LinkedIn](https://www.linkedin.com/in/arielle-landau-8374091bb)
 
-## Musings
-
-- [What is open source GIScience?](musings/open-source.md) 
-- [GIS as a Reproducible Science](musings/GISasReproducibleScience.md)
+## [Musings](/musings)
