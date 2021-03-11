@@ -19,18 +19,19 @@ A case study of hospital service areas in New England was used to
 investigate the accuracy of the model, as compared to the hospital service areas
 determined by the [Dartmouth Atlas of Health Care](https://www.dartmouthatlas.org/).
 
-**Workflow**
+**Workflows**
+
+![HSA Pre-Processing Model Workflow](assets/PreProcessModel.png)
 
 [Hospital Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/6ac5e325468c4cb9b905f1728d6fbf0f_0)
 from the Homeland Security Administration was pre-processed in a [model](assets/HSAPreProcess.model3)
 that removed closed hospitals and hospitals with no beds, as well as filtered out
 hospitals that weren't classified as general acute care.
 
-![HSA Pre-Processing Model Workflow](assets/PreProcessModel.png)
-HSA Pre-Processing Model Workflow
-
 ![Gravity Model Workflow](assets/GravityModel.png)
 Gravity Model Workflow
+
+Spatial catchments were calculated by aggregating the sum of the input weights into the target features.
 
 After pre-processing the HSA Hospital Data was put into the gravity model as the
 target layer, with beds as the weight field. Town and population data from
