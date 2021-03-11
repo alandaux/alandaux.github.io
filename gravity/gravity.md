@@ -5,7 +5,9 @@ title: Gravity Model of Spatial Interaction
 
 **Tldr: [the final product!](assets/index.html)**
 
-A [gravity model](assets/GravityModel.model3) of spatial interaction model was created for the purpose of
+**Purpose**
+
+A [gravity model](assets/GravityModel.model3) of spatial interaction was created for the purpose of
 identifying the potential interaction between two places. The model uses
 three variables to calculate potential interaction: the weight/attractiveness
 of the input, the weight/attractiveness of the target and the distance between
@@ -13,18 +15,22 @@ the origin and the target. These three parameters combine to form the
 equation: (inputWeight)^λ * (targetWeight)^α / (distance)^β as referenced
 in Rodrigues [The Geography of Transport Systems](https://transportgeography.org/contents/methods/spatial-interactions-gravity-model/)
 
-![Gravity Model Workflow](assets/GravityModel.png)
-
-A case study of hospital service areas in New England was used a case study to
+A case study of hospital service areas in New England was used to
 investigate the accuracy of the model, as compared to the hospital service areas
 determined by the [Dartmouth Atlas of Health Care](https://www.dartmouthatlas.org/).
 
+**Workflow**
+
 [Hospital Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/6ac5e325468c4cb9b905f1728d6fbf0f_0)
 from the Homeland Security Administration was pre-processed in a [model](assets/HSAPreProcess.model3)
-that removed closed hospitals and hospitals with no beds, as well as filter out
+that removed closed hospitals and hospitals with no beds, as well as filtered out
 hospitals that weren't classified as general acute care.
 
+HSA Pre-Processing Model Workflow
 ![HSA Pre-Processing Model Workflow](assets/PreProcessModel.png)
+
+Gravity Model Workflow
+![Gravity Model Workflow](assets/GravityModel.png)
 
 After pre-processing the HSA Hospital Data was put into the gravity model as the
 target layer, with beds as the weight field. Town and population data from
@@ -32,7 +38,7 @@ the American Community Survey 2018 5 year average was the input layer, with
 population as the weight field. The ACS [data](https://gis4dev.github.io/lessons/assets/netown.gpkg)
 was put together by Joe Holler.
 
-**You find the comparison between my gravity model of spatial interaction for
+**You can find the comparison between my gravity model of spatial interaction for
 hospital service areas in New England and the Dartmouth Atlas of Health care
 [here](assets/index.html).**
 
