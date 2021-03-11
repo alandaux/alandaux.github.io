@@ -26,11 +26,11 @@ from the Homeland Security Administration was pre-processed in a [model](assets/
 that removed closed hospitals and hospitals with no beds, as well as filtered out
 hospitals that weren't classified as general acute care.
 
-HSA Pre-Processing Model Workflow
 ![HSA Pre-Processing Model Workflow](assets/PreProcessModel.png)
+HSA Pre-Processing Model Workflow
 
-Gravity Model Workflow
 ![Gravity Model Workflow](assets/GravityModel.png)
+Gravity Model Workflow
 
 After pre-processing the HSA Hospital Data was put into the gravity model as the
 target layer, with beds as the weight field. Town and population data from
