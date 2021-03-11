@@ -29,9 +29,11 @@ that removed closed hospitals and hospitals with no beds, as well as filtered ou
 hospitals that weren't classified as general acute care.
 
 ![Gravity Model Workflow](assets/GravityModel.png)
-Gravity Model Workflow
-
-Spatial catchments were calculated by aggregating the sum of the input weights into the target features.
+**Gravity Model Workflow**
+Additional Details: 
+* Distance Matrix allows for the additional input of k, a variable which determines the nearest number of k input features to compare to target features
+* Potential was calculated using the equation (inputWeight)^λ * (targetWeight)^α / (distance)^β
+* Spatial catchments were calculated by aggregating the sum of the input weights into the target features.
 
 After pre-processing the HSA Hospital Data was put into the gravity model as the
 target layer, with beds as the weight field. Town and population data from
