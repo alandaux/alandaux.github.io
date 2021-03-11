@@ -20,7 +20,7 @@ investigate the accuracy of the model, as compared to the hospital service areas
 determined by the [Dartmouth Atlas of Health Care](https://www.dartmouthatlas.org/).
 
 [Hospital Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/6ac5e325468c4cb9b905f1728d6fbf0f_0)
-from the Homeland Security Administration was pre-processed in a [model](assets/HSAPreProcessModel.model3)
+from the Homeland Security Administration was pre-processed in a [model](assets/HSAPreProcess.model3)
 that removed closed hospitals and hospitals with no beds, as well as filter out
 hospitals that weren't classified as general acute care.
 
@@ -47,4 +47,4 @@ room for the accuracy of my model to be improved.
 
 **Complete Models:**
 * [Gravity Model of Spatial Interaction](assets/GravityModel.model3)
-* [HSA Hospitals Pre-Processing Model](assets/HSAPreProcessModel.model3)
+* [HSA Hospitals Pre-Processing Model](assets/HSAPreProcess.model3)
