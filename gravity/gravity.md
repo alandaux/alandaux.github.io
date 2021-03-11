@@ -47,7 +47,7 @@ hospital service areas in New England and the Dartmouth Atlas of Health care
 
 Although there are some similarities between the output of my model and the
 Dartmouth Atlas of Health Care's geographic boundaries, there is still a lot of
-room for the accuracy of my model to be improved. 
+room for the accuracy of my model to be improved. However, both models find areas with limited access to healthcare, in the more rural areas of northern Maine and northern New York, showing a potentially alarming pattern of a lack of access to hospitals in rural areas. In the future, it would be interesting to see if this pattern of lack of access to hospitals in rural areas extends to other parts of the United States, or if we see similar patterns in other countries. Especially during the COVID-19 pandemic, doing a spatial interaction analysis on the location of vaccination sites would also provide an insight into communities that are currently falling below the radar but should be provided additional support, whether that be in aiding transportation to vaccination sites, or changing the locations of vaccination sites themselves. 
 
 **Summary of data sources:**
 * [HSA Hospital Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/6ac5e325468c4cb9b905f1728d6fbf0f_0)
