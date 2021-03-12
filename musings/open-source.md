@@ -38,3 +38,7 @@ or to potentially assign ourselves to any "issues" that we have worked on to
 keep track of who has worked on what. In this way, we would be following
 the values of the open source GIScience movement, but would also remain in
 line with Middlebury College's honor code.
+
+Sources:
+* Rey, S. J. 2009. Show me the code: spatial analysis and open source. Journal of Geographical Systems 11 (2):191–207. http://dx.doi.org/10.1007/s10109-009-0086-8
+* Singleton, A. D., S. Spielman, and C. Brunsdon. 2016. Establishing a framework for Open Geographic Information science. International Journal of Geographical Information Science 30 (8):1507–1521. http://dx.doi.org/10.1080/13658816.2015.1137579
