@@ -10,7 +10,7 @@ layout: default
 [LinkedIn](https://www.linkedin.com/in/arielle-landau-8374091bb)
 
 ## Project Portfolios
-- [An Environmental Justice Analysis of Protected Areas in Connecticut](/LandauCTEJReport.pdf) 
+- [An Environmental Justice Analysis of Protected Areas in Connecticut](Landau_CTEJReport.pdf) 
 
 **Relevant Course Work:**
 - Human Geography with GIS
