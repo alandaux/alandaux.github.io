@@ -7,14 +7,20 @@ layout: default
 
 #### I'm a student at Middlebury College studying Environmental Justice and Computer Science. I hope to use emerging open source technologies to advance social justice oriented goals.
 
-[Gravity Model of Spatial Interaction](gravity/gravity.md)
+[LinkedIn](https://www.linkedin.com/in/arielle-landau-8374091bb)
 
-Relevant Course Work:
+## Project Portfolios
+
+**Relevant Course Work:**
 - Human Geography with GIS
 - Software Development
 - OOP & GUI Development
 - Open Source GIS Science
+- Computer Architecture
+- OOP & GUI Development
+- Data Structures
 
-[LinkedIn](https://www.linkedin.com/in/arielle-landau-8374091bb)
+## Open Source GIScience Labs
+- [Gravity Model of Spatial Interaction](gravity/gravity.md)
 
 ## [Musings](/musings)
