@@ -13,6 +13,7 @@ layout: default
 - [An Environmental Justice Analysis of Protected Areas in Connecticut](Landau_CTEJReport.pdf) 
 - [BIPOC Population's Access to Train Stations in Cambridge and Somerville Massachusetts](assets/camberville.md)
 - [Protecting Wading Waterfowl Habitat in Maine's Midcoast Watersheds](assets/WWHMaine.md) 
+- [Ethical Considerations for Solar Development in Chittenden County, VT](assets/ChittendenSolarEthics.md) 
 
 **Relevant Course Work:**
 - Human Geography with GIS
