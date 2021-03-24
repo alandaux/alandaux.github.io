@@ -39,7 +39,7 @@ Models used in GRASS:
 * [Visualization](visualize.gxm)
 
 Differences from the Original Study:
-Kasprak's used a DEM of 0.1m grid resolution, and aerial imagery of 1m resolution. Our replication used a DEM of 1m grid resolution, making digitization of stream banks and valley sides less accurate than it would be with the same data as Kasprak.  
+Kasprak et al. used a DEM of 0.1m grid resolution derived from LIDAR data. Our replication used a DEM of 1m grid resolution from John Day Watershed LIDAR data, making digitization of stream banks and valley sides less accurate than it would be with the same data as Kasprak.  
 
 Elaborated Protocol for Digitization:
 After visualizing the hillshade, the opacity for the hillshade, DEM and slope were changed in order to gain a view favorable for identifying stream banks and the valley edge for digitization.
