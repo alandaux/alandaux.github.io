@@ -53,8 +53,8 @@ The classification scheme we followed:
 ## Replication Results
 
 Figures:
-![Elevation Map](elevationStudySiteMap.png)
-![Slope Map](slopeStudySiteMap.png)
+![Elevation Map](assets/elevationStudySiteMap.png)
+![Slope Map](assets/slopeStudySiteMap.png)
 ![Stream Centerline](assets/streamCenterlineMap.png)
 ![Valley Centerline](assets/valleyCenterlineMap.png)
 ![Longitudinal Profile of Extracted Reach](assets/longProfExtracted.png)
@@ -105,7 +105,7 @@ Atypical streams often do not fit in with established categories, meaning they g
 
 ## Conclusion
 
-This replication of Rosgen and Kasprak showed that there is potential to use GIS for stream classification, but the accuracy of such classifications require detailed satellite and elevation data. Level I stream classification was consistent between this replication and Kasprak, but the level II classification failed. However, this study site was atypical, so future replications and research should be done on other sites used in Kasprak et al. to see if the difficulty in matching level II classifications continues across all sites. This would help determine whether the results in this study were because of the atypicality of the study site, or because of broader issues with using GIS for stream classification. If lower level classifications are consistent across other, more typical study sites, there is the potential to grow the existing knowledge of rivers remotely, therefore cutting costs for research, while also decreasing the carbon footprint of research that requires travel. 
+This replication of Rosgen and Kasprak showed that there is potential to use GIS for stream classification, but the accuracy of such classifications require detailed satellite and elevation data. Level I stream classification was consistent between this replication and Kasprak, but the level II classification failed. However, this study site was atypical, so future replications and research should be done on other sites used in Kasprak et al. to see if the difficulty in matching level II classifications continues across all sites. This would help determine whether the results in this study were because of the atypicality of the study site, or because of broader issues with using GIS for stream classification. If lower level classifications are consistent across other, more typical study sites, there is the potential to grow the existing knowledge of rivers remotely, therefore cutting costs for research, while also decreasing the carbon footprint of research that requires travel.
 
 
 ## References
