@@ -10,10 +10,10 @@ layout: default
 [LinkedIn](https://www.linkedin.com/in/arielle-landau-8374091bb)
 
 ## Project Portfolios
-- [An Environmental Justice Analysis of Protected Areas in Connecticut](Landau_CTEJReport.pdf) 
+- [An Environmental Justice Analysis of Protected Areas in Connecticut](Landau_CTEJReport.pdf)
 - [BIPOC Population's Access to Train Stations in Cambridge and Somerville Massachusetts](assets/camberville.md)
-- [Protecting Wading Waterfowl Habitat in Maine's Midcoast Watersheds](assets/WWHMaine.md) 
-- [Ethical Considerations for Solar Development in Chittenden County, VT](assets/ChittendenSolarEthics.md) 
+- [Protecting Wading Waterfowl Habitat in Maine's Midcoast Watersheds](assets/WWHMaine.md)
+- [Ethical Considerations for Solar Development in Chittenden County, VT](assets/ChittendenSolarEthics.md)
 
 **Relevant Course Work:**
 - Human Geography with GIS
@@ -26,5 +26,6 @@ layout: default
 
 ## Open Source GIScience Labs
 - [Gravity Model of Spatial Interaction](gravity/gravity.md)
+- [Rosgen Strem Classification Replication Study](rosgen/rosgenReport.md)
 
 ## [Musings](/musings)
