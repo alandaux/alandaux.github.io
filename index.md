@@ -16,7 +16,7 @@ layout: default
 - [Protecting Wading Waterfowl Habitat in Maine's Midcoast Watersheds](assets/WWHMaine.md)
 - [Ethical Considerations for Solar Development in Chittenden County, VT](assets/ChittendenSolarEthics.md)
 
-**Relevant Course Work:**
+## Relevant Course Work:**
 - Human Geography with GIS
 - Software Development
 - OOP & GUI Development
@@ -25,9 +25,44 @@ layout: default
 - OOP & GUI Development
 - Data Structures
 
+## Skills
+
+Programming Languages:
+- Python       
+- Java
+- Javascript  
+- CSS
+- HTML      
+- C
+- C++          
+- R
+- SQL     
+
+Software Development:
+- PostgreSQL
+- Node
+- React           
+- Next
+- Github         
+- Qt
+- VS Code      
+- TDD
+- Agile Development
+
+Computer Programs:
+- R. Studio  
+- Tableau      
+- ArcGIS         
+- QGIS
+- Adobe Illustrator
+- iMovie           
+- Audacity
+- PC and Mac software
+- Microsoft Office Suite
+
 ## Open Source GIScience Labs
 - [Gravity Model of Spatial Interaction](gravity/gravity.md)
-- [Rosgen Strem Classification Replication Study](rosgen/rosgenReport.md)
+- [Rosgen Stream Classification Replication Study](rosgen/rosgenReport.md)
 - [Analysis of Resilience of Schools to Flooding in Dar es Salaam](DarEsSalaamResilienceAcademy/report.md)
 
 ## [Musings](/musings)

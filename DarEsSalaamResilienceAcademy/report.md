@@ -100,6 +100,8 @@ Efforts should prioritize the TPDC subward where 6 out of the 7 schools are at r
 
 Visualized in the schools layer in the leaflet map are the location of schools, colored based on their risk of flooding. In the TPDC subward, the schools at risk for flooding are located throughout the subward, meaning a more comprehensive risk management strategy is required. In the Bonde la Mpunga subward, however, the schools at risk of flooding are more concentrated spatially, requiring a less complex risk management strategy as efforts in evacuating schools is limited to one area.
 
+![Flooded Schools by Subward in Dar es Salaam Tanzania](assets/figure.png)
+
 **Sources**
 - [Open Street Map](https://www.openstreetmap.org/#map=12/-6.8162/39.2203)
 - [Ramana Huria](https://ramanihuria.org/en/): a community mapping project for Dar es Salaam, Tanzania
