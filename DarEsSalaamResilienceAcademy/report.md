@@ -5,11 +5,13 @@ layout: default
 # Analysis of the Resilience of Schools in Subwards of Dar es Salaam
 
 **Guiding Question**
+
 Are schools in Dar Es Salaam vulnerable to flooding? And if so, which subwards are at the most risk of experiencing flooded schools?
 
-A quick study of natural disaster literature and scholarship will tell you that women and children are particularly vulnerable to flooding. We sought to analyze the vulnerability of children in Dar es Salaam to flooding by examining the number of schools in flood zones. Understanding which schools are at risk of flooding can help improve resilience by informing evacuation policies and plans for resource distribution in the event of a flood.
+A quick study of natural disaster literature and scholarship will tell you that women and children are particularly vulnerable to flooding (Smith 2006). We sought to analyze the vulnerability of children in Dar es Salaam to flooding by examining the number of schools in flood zones. Understanding which schools are at risk of flooding can help improve resilience by informing evacuation policies and plans for resource distribution in the event of a flood.
 
 **Methods**
+
 ***A file with all of the sql queries can be found [here](assets/schoolVulnerabilityAnalysis.sql)***
 
 We first extracted the location of schools from Open Street Map, and then found where these schools intersected with flood zones.
@@ -89,8 +91,12 @@ UPDATE subwards2
 SET flooded_school_count = 0
 WHERE flooded_school_count IS NULL;
 ```
+**Results**
+
+You can find our leaflet map [here](https://jafreedman12.github.io/daressaalam/assets/?fbclid=IwAR38WmeqAvszZzetI_BXBAD75dSAWK_cHGY6FLEJuLnqqyXWAyvMytWEI_8#12/-6.7562/39.2710)!
 
 **Sources**
 - [Open Street Map](https://www.openstreetmap.org/#map=12/-6.8162/39.2203)
 - [Ramana Huria](https://ramanihuria.org/en/): a community mapping project for Dar es Salaam, Tanzania
 - [Resilience Academy](https://resilienceacademy.ac.tz/): part of the Ramana Huria project, Resilience Academy seeks to involve young people with resilience planning
+- Smith, Neil. 2006. There is No Such Thing as a Natural Disaster.
