@@ -40,7 +40,7 @@ WHERE flooded IS NULL;
 
 We then added subward information to the schools.
 
-```sql
+```SQL
 --  Copy the subwards table for future analyses
 CREATE TABLE subwards2 AS
 SELECT *
@@ -97,6 +97,7 @@ You can find our leaflet map [here](https://jafreedman12.github.io/daressaalam/a
 
 Visualized in the subwards2 layer in the leaflet map are the percentage of schools in each subward that are at risk of flooding. We found several subwards with multiple schools at risk of flooding along the shoreline, such as both the Mbezi Beach subwards and the Bonde la Mpunga subward. Schools in subwards further inland along the historic flood zone were also at risk in subwards such as Uwanja wa Ndege and Mbuyuni. This analysis shows that evacuation plans for future floods need to take into account not only schools along the shoreline, but also schools along the historic flood zone.
 Efforts should prioritize the TPDC subward where 6 out of the 7 schools are at risk of flooding.
+
 Visualized in the schools layer in the leaflet map are the location of schools, colored based on their risk of flooding. In the TPDC subward, the schools at risk for flooding are located throughout the subward, meaning a more comprehensive risk management strategy is required. In the Bonde la Mpunga subward, however, the schools at risk of flooding are more concentrated spatially, requiring a less complex risk management strategy as efforts in evacuating schools is limited to one area.
 
 **Sources**
