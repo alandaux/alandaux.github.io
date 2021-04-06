@@ -95,6 +95,10 @@ WHERE flooded_school_count IS NULL;
 
 You can find our leaflet map [here](https://jafreedman12.github.io/daressaalam/assets/?fbclid=IwAR38WmeqAvszZzetI_BXBAD75dSAWK_cHGY6FLEJuLnqqyXWAyvMytWEI_8#12/-6.7562/39.2710)!
 
+Visualized in the subwards2 layer in the leaflet map are the percentage of schools in each subward that are at risk of flooding. We found several subwards with multiple schools at risk of flooding along the shoreline, such as both the Mbezi Beach subwards and the Bonde la Mpunga subward. Schools in subwards further inland along the historic flood zone were also at risk in subwards such as Uwanja wa Ndege and Mbuyuni. This analysis shows that evacuation plans for future floods need to take into account not only schools along the shoreline, but also schools along the historic flood zone.
+Efforts should prioritize the TPDC subward where 6 out of the 7 schools are at risk of flooding.
+Visualized in the schools layer in the leaflet map are the location of schools, colored based on their risk of flooding. In the TPDC subward, the schools at risk for flooding are located throughout the subward, meaning a more comprehensive risk management strategy is required. In the Bonde la Mpunga subward, however, the schools at risk of flooding are more concentrated spatially, requiring a less complex risk management strategy as efforts in evacuating schools is limited to one area.
+
 **Sources**
 - [Open Street Map](https://www.openstreetmap.org/#map=12/-6.8162/39.2203)
 - [Ramana Huria](https://ramanihuria.org/en/): a community mapping project for Dar es Salaam, Tanzania

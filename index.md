@@ -28,5 +28,6 @@ layout: default
 ## Open Source GIScience Labs
 - [Gravity Model of Spatial Interaction](gravity/gravity.md)
 - [Rosgen Strem Classification Replication Study](rosgen/rosgenReport.md)
+- [Analysis of Resilience of Schools to Flooding in Dar es Salaam](DarEsSalaamResilienceAcademy/report.md)
 
 ## [Musings](/musings)
