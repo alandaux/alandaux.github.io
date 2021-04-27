@@ -4,15 +4,15 @@ title: RP- Vulnerability modeling for sub-Saharan Africa
 ---
 
 
-**Replication of**
+**Reproduction of**
 # Vulnerability modeling for sub-Saharan Africa
 
 Original study *by* Malcomb, D. W., E. A. Weaver, and A. R. Krakowka. 2014. Vulnerability modeling for sub-Saharan Africa: An operationalized approach in Malawi. *Applied Geography* 48:17–30. DOI:[10.1016/j.apgeog.2014.01.004](https://doi.org/10.1016/j.apgeog.2014.01.004)
 
-Replication Authors:
+Reproduction Authors:
 Arielle Landau, Joseph Holler, Kufre Udoh, Open Source GIScience students of fall 2019 and Spring 2021
 
-Replication Materials Available at: [alandaux-RP-Malcomb](https://github.com/alandaux/RP-Malcomb)
+Reproduction Materials Available at: [alandaux-RP-Malcomb](https://github.com/alandaux/RP-Malcomb)
 
 Created: `14 April 2021`
 Revised: `26 April 2021`
@@ -25,7 +25,7 @@ The original study is a multi-criteria analysis of vulnerability to Climate Chan
 
 The study region is the country of Malawi. The spatial support of input data includes DHS survey points, Traditional Authority boundaries, and raster grids of flood risk (0.833 degree resolution) and drought exposure (0.416 degree resolution).
 
-The original study was published without data or code, but has detailed narrative description of the methodology. The methods used are feasible for undergraduate students to implement following completion of one introductory GIS course. The study states that its data is available for replication in 23 African countries.
+The original study was published without data or code, but has detailed narrative description of the methodology. The methods used are feasible for undergraduate students to implement following completion of one introductory GIS course. The study states that its data is available for reproduction in 23 African countries.
 
 
 ### Data Description and Variables
@@ -45,7 +45,7 @@ For livelihood sensitivity and adaptive capacity, all fields used were percent r
 ### Analytical Specification
 
 The original study was conducted using ArcGIS and STATA, but does not state which versions of these software were used.
-The replication study will use R.
+The reproduction study will use R.
 
 ## Materials and Procedure
 
@@ -130,12 +130,12 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 19. Add all RASTERs together to calculate final output:  final = (40 - geo) * 0.40 + drought * 0.20 + flood * 0.20 + lhz_sensitivity * 0.20
 20. Use zonal statistics to aggregate raster to TA geometry for final calculation of vulnerability in each traditional authority
 
-## Replication Results
+## reproduction Results
 
 **Adaptive Capacity by Traditional Authority**
 [Adaptive Capacity by Traditional Authority](figures/ac_2010.png)
 
-**Difference in Replication and Original Study for Adaptive Capacity**
+**Difference in Reproduction and Original Study for Adaptive Capacity**
 [Adaptive Capacity Difference](figures/ACDiff.png)
 
 **Confusion Matrix for Adaptive Capacity**
@@ -150,12 +150,12 @@ A scatterplot comparing raster values between the reproduction and original stud
 [Scatterplot](figures/fig5DiffScatterplot.png)
 
 
-**Difference in Replication and Original Study for Vulnerability**
+**Difference in Reproduction and Original Study for Vulnerability**
 [Vulnerability Difference](figures/VulDiff.png)
 
 The difference between our reproduction of vulnerability in Malawi and that of the original study was similarly calculated using Spearman's Rho. The Spearman's Rho for this comparison was 0.271046, indicating a weak positive correlation between our vulnerability map and Malcomb's.
 
-Overall, the adaptive capacity map was supported by the replication, but the vulnerability map was not supported by the replication.
+Overall, the adaptive capacity map was supported by the reproduction, but the vulnerability map was not supported by the reproduction.
 
 
 ## Unplanned Deviations from the Protocol
@@ -167,20 +167,20 @@ It was also unclear how Malcomb et al. calculated disaster coping strategy. Disa
 Additionally, when subsequently running the R script, the DHS data is already downloaded, making the code blocks which download this data break. Emma Brown, a classmate, figured out that where we called the downloaded DHS data in the R script, we instead needed to provide a direct file path to the already downloaded data.
 
 ## Discussion
-Our replication of Malcomb et al. provided lots of insight into the detail required in the original study in order to produce a successful replication. The detail provided in how Malcomb et al. calculated adaptive capacity was sufficient because almost all of the indicators used corresponded directly to data fields in DHS data, leaving less room for error. This was shown in our succesful reproduction of Figure 4, the adaptive capacity for each traditional authority, with a Spearman's Rho of 0.7795965. The lack of a perfect replication is likely a result of several uncertainties. One of those uncertainties is in how vulnerability indicators were ranked. Throughout Malcomb et al., data is discussed as being broken into quantiles, or on a scale of 0 - 5. While quantile designates 5 categories, a scale of 0 - 5 indicates 6, making it unclear on what scale the data should be re-classified. It is also unclear how Malcomb et al. converted binary categories, such as sex, to quintiles or a scale of 0 - 5. For the purposes of our replication, we used percent rank to re-classify data into 5 categories. Another uncertainty was at which level to weight data fields and calculate adaptive capacity. We decided to calculate adaptive capacity at the household level, and then aggregate to traditional authorities, but it is entirely possible that Malcomb et al. calculated adaptive capacity at the traditional authorities level by aggregating the raw household data first.
+Our reproduction of Malcomb et al. provided lots of insight into the detail required in the original study in order to produce a successful reproduction. The detail provided in how Malcomb et al. calculated adaptive capacity was sufficient because almost all of the indicators used corresponded directly to data fields in DHS data, leaving less room for error. This was shown in our successful reproduction of Figure 4, the adaptive capacity for each traditional authority, with a Spearman's Rho of 0.7795965. The lack of a perfect reproduction is likely a result of several uncertainties. One of those uncertainties is in how vulnerability indicators were ranked. Throughout Malcomb et al., data is discussed as being broken into quantiles, or on a scale of 0 - 5. While quantile designates 5 categories, a scale of 0 - 5 indicates 6, making it unclear on what scale the data should be re-classified. It is also unclear how Malcomb et al. converted binary categories, such as sex, to quintiles or a scale of 0 - 5. For the purposes of our reproduction, we used percent rank to re-classify data into 5 categories. Another uncertainty was at which level to weight data fields and calculate adaptive capacity. We decided to calculate adaptive capacity at the household level, and then aggregate to traditional authorities, but it is entirely possible that Malcomb et al. calculated adaptive capacity at the traditional authorities level by aggregating the raw household data first.
 
-The lack of detail in Malcomb et al. on how livelihood sensitivity was calculated meant that our replication of vulnerability in Malawi was a failure, with a Spearman's Rho of 0.271046. There was lots of uncertainty in which data fields for Malawi's livelihood zones corresponded to Malcomb et al's categories of %income from wage labor, %income from cash crops and disaster coping strategy. For %income from wage labor, it was unclear whether income from self-employment, in addition to labor should be counted (we decided to just use income from labor). For %income from cash crops, it was unclear what crops were considered to be cash crops, or whether we should count all income from crops (what we ultimately decided). Disaster coping strategy had the most uncertainty, with no guidance on what data fields could possibly correspond to disaster coping strategy (we summed the income from selling firewood, wild foods and grasses, assuming these practices to be ecologically destructive activities). Because this uncertainty was introduced early on in the vulnerability model, the error is likely to multiply as we move through the analysis.
+The lack of detail in Malcomb et al. on how livelihood sensitivity was calculated meant that our reproduction of vulnerability in Malawi was a failure, with a Spearman's Rho of 0.271046. There was much uncertainty in which data fields for Malawi's livelihood zones corresponded to Malcomb et al's categories of %income from wage labor, %income from cash crops and disaster coping strategy. For %income from wage labor, it was unclear whether income from self-employment, in addition to labor should be counted (we decided to just use income from labor). For %income from cash crops, it was unclear what crops were considered to be cash crops, or whether we should count all income from crops (what we ultimately decided). Disaster coping strategy had the most uncertainty, with no guidance on what data fields could possibly correspond to disaster coping strategy (we summed the income from selling firewood, wild foods and grasses, assuming these practices to be ecologically destructive activities). Because this uncertainty was introduced early on in the vulnerability model, the error is likely to multiply as we move through the analysis.
 
-As no code was published in Malcomb et al., the entire workflow is uncertain as there is no clarification in how data was scaled, weighted and at what level any kind of aggregation or calculations occurred. Making the code available for their statistical analysis would go a long way in clarifying decisions that did not seem important to include in a methods section, but become incredibly relevant when trying to produce a replication.
+As no code was published in Malcomb et al., the entire workflow is uncertain as there is no clarification in how data was scaled, weighted and at what level any kind of aggregation or calculations occurred. Making the code available for their statistical analysis would go a long way in clarifying decisions that did not seem important to include in a methods section, but become incredibly relevant when trying to produce a successful reproduction.
 
-Our replication also sheds light on larger debates in the field of geography on issues of error and uncertainty. Longley (2008) introduces a model for thinking about error and uncertainty in spatial research where error and uncertainty is introduced at each step of spatial analysis. This process is represented in a timeline where error and uncertainty is introduced at every step: real world --> conception --> measurement & representation --> analysis --> interpretation and validation. Every step takes us further and further away from an accurate representation of the real world. The problem with Malcomb et al. is that we do not even know the details of how they went from their data sources to their meta-themes of measuring vulnerability, to how they analyzed data to fit their categories of resilience. We know there is uncertainty inherent in this process, but the lack of detail on their process of spatial analysis means we cannot estimate or discuss what kind of uncertainty was introduced, or how it was introduced. Tate (2013) also provides a helpful framework in thinking about vulnerability model and uncertainty. Tate (2013) outlines decisions in each phase of modeling that could introduce uncertainty in models. However, there are several points in decision making for a model that are completely ignored by Malcomb et al. There is no decision made on how to measure error, and there is also no phase of the model where Malcomb et al. conduct an uncertainty or sensitivity analysis, or validate their findings in any way. There is thus no way for us to estimate how much uncertainty was introduced by Malcomb et al. in their decision. We have no idea how much their choices mattered for the final result.
+Our reproduction also sheds light on larger debates in the field of geography on issues of error and uncertainty. Longley (2008) introduces a model for thinking about error and uncertainty in spatial research where error and uncertainty is introduced at each step of spatial analysis. This process is represented in a timeline where error and uncertainty is introduced at every step: real world --> conception --> measurement & representation --> analysis --> interpretation and validation. Every step takes us further and further away from an accurate representation of the real world. The problem with Malcomb et al. is that we do not even know the details of how they went from their data sources to their meta-themes of measuring vulnerability, to how they analyzed data to fit their categories of resilience. We know there is uncertainty inherent in this process, but the lack of detail on their process of spatial analysis means we cannot estimate or discuss what kind of uncertainty was introduced, or how it was introduced. Tate (2013) also provides a helpful framework in thinking about vulnerability model and uncertainty. Tate (2013) outlines decisions in each phase of modeling that could introduce uncertainty in models. However, there are several points in decision making for a model that are completely ignored by Malcomb et al. There is no decision made on how to measure error, and there is also no phase of the model where Malcomb et al. conduct an uncertainty or sensitivity analysis, or validate their findings in any way. There is thus no way for us to estimate how much uncertainty was introduced by Malcomb et al. in their decision. We have no idea how much their choices mattered for the final result.
 
 ## Conclusion
 
-Our partial successful replication of Malcomb et al. shows the need to clarify data fields used in any kind of calculation, as well as the need to publish code to clarify procedures. In replication Malcomb et al., we contributed to theories that replication is key in uncovering uncertainties in vulnerability models, and that open source GIScience is an important step in minimizing uncertainty in geographic studies.
+Our partial successful reproduction of Malcomb et al. shows the need to clarify data fields used in any kind of calculation, as well as the need to publish code to clarify procedures. In reproduction Malcomb et al., we contributed to theories that reproduction is key in uncovering uncertainties in vulnerability models, and that open source GIScience is an important step in minimizing uncertainty in geographic studies.
 
 ## A Big Thank You To All My Group Members!
-This was largely a group project, and this reproduction could not have been done without Maddie Tango, Jackson Mumper, Evan Killion, Sanjana Roy and Steven Montilla-Morantes. 
+This was largely a group project, and this reproduction could not have been done without Maddie Tango, Jackson Mumper, Evan Killion, Sanjana Roy and Steven Montilla-Morantes.
 
 ## References
 Longley, P. A., M. F. Goodchild, D. J. Maguire, and D. W. Rhind. 2008. Geographical information systems and science 2nd ed. Chichester: Wiley. (only chapter 6: Uncertainty, pages 127-153)
@@ -193,7 +193,7 @@ Include any referenced studies or materials in the [AAG Style of author-date ref
 
 ####  Report Template References & License
 
-This template was developed by Peter Kedron and Joseph Holler with funding support from HEGS-2049837. This template is an adaptation of the ReScience Article Template Developed by N.P Rougier, released under a GPL version 3 license and available here: https://github.com/ReScience/template. Copyright © Nicolas Rougier and coauthors. It also draws inspiration from the pre-registration protocol of the Open Science Framework and the replication studies of Camerer et al. (2016, 2018). See https://osf.io/pfdyw/ and https://osf.io/bzm54/
+This template was developed by Peter Kedron and Joseph Holler with funding support from HEGS-2049837. This template is an adaptation of the ReScience Article Template Developed by N.P Rougier, released under a GPL version 3 license and available here: https://github.com/ReScience/template. Copyright © Nicolas Rougier and coauthors. It also draws inspiration from the pre-registration protocol of the Open Science Framework and the reproduction studies of Camerer et al. (2016, 2018). See https://osf.io/pfdyw/ and https://osf.io/bzm54/
 
 Camerer, C. F., A. Dreber, E. Forsell, T.-H. Ho, J. Huber, M. Johannesson, M. Kirchler, J. Almenberg, A. Altmejd, T. Chan, E. Heikensten, F. Holzmeister, T. Imai, S. Isaksson, G. Nave, T. Pfeiffer, M. Razen, and H. Wu. 2016. Evaluating replicability of laboratory experiments in economics. Science 351 (6280):1433–1436. https://www.sciencemag.org/lookup/doi/10.1126/science.aaf0918.
 
