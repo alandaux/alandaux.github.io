@@ -64,5 +64,6 @@ Computer Programs:
 - [Gravity Model of Spatial Interaction](gravity/gravity.md)
 - [Rosgen Stream Classification Replication Study](rosgen/rosgenReport.md)
 - [Analysis of Resilience of Schools to Flooding in Dar es Salaam](DarEsSalaamResilienceAcademy/report.md)
+- [Reproduction of Vulnerability Modeling for Sub-Saharan Africa](RP-Malcomb/docs/report/RP-Malcomb-Report.md)
 
 ## [Musings](/musings)
