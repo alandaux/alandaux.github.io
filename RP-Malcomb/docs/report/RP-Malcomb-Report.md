@@ -133,25 +133,25 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 ## reproduction Results
 
 **Adaptive Capacity by Traditional Authority**
-[Adaptive Capacity by Traditional Authority](figures/ac_2010.png)
+![Adaptive Capacity by Traditional Authority](figures/ac_2010.png)
 
 **Difference in Reproduction and Original Study for Adaptive Capacity**
-[Adaptive Capacity Difference](figures/ACDiff.png)
+![Adaptive Capacity Difference](figures/ACDiff.png)
 
 **Confusion Matrix for Adaptive Capacity**
-[Confusion Matrix](figures/confusionMatrix.png)
+![Confusion Matrix](figures/confusionMatrix.png)
 
 The difference between the reproduction of adaptive capacity by traditional authority, and that of the original study was calculated using Spearman's Rho. Spearman's Rho calculates the correlation of ranked data with the assumption that there is no correlation (the null hypothesis). A value of 0 means no correlation, -1 designates an inverse correlation, and 1 designates a positive correlation. The Spearman's Rho for the comparison between our adaptive capacity map and Malcomb's resilience map was 0.7795965, indicating a somewhat strong positive correlation.
 
 **Map of Vulnerability in Malawi**
-[Map of Vulnerability in Malawi](figures/vulnerability.png)
+![Map of Vulnerability in Malawi](figures/vulnerability.png)
 
 A scatterplot comparing raster values between the reproduction and original study vulnerability maps similar indicates a weak correlation.
-[Scatterplot](figures/fig5DiffScatterplot.png)
+![Scatterplot](figures/fig5DiffScatterplot.png)
 
 
 **Difference in Reproduction and Original Study for Vulnerability**
-[Vulnerability Difference](figures/VulDiff.png)
+![Vulnerability Difference](figures/VulDiff.png)
 
 The difference between our reproduction of vulnerability in Malawi and that of the original study was similarly calculated using Spearman's Rho. The Spearman's Rho for this comparison was 0.271046, indicating a weak positive correlation between our vulnerability map and Malcomb's.
 
