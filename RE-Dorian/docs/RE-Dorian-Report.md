@@ -75,22 +75,27 @@ Specific code for my analysis can be found [here](procedure/code/Birding Analysi
 
 Temporal Analysis of Bird Related Tweets
 ![Temporal Analysis](figures/birdsbyhour)
+
 There is a general pattern of the number of bird related tweets rising in the morning. Notably, there is a spike of bird related tweets on April 30th.
 
 Count of Unique Words found in Bird Related Tweets
 ![Unique words](figures/birdUniqueWords)
+
 The most common word found in bird related tweets was morning, corresponding to the spike of bird related tweets seen in the morning hours in the temporal analysis.
 
 Word Network of Bird Tweets around Bird Day
-![Word Network of Birds](figures/wordNetworkOfBirdTweets)
+![Word Network of Birds](figures/wordNetworkofBirdTweets)
+
 The word network of tweets from the contextual analysis begins to show where there are strong birding communities, such as those around central park.
 
 Tweet Locations Around Bird Day
 ![Bird Twitter Activity](figures/tweetLocationsAroundBirdDay)
+
 Locations of bird related tweets are pretty sporadic, but there seems to be higher numbers of tweets along the East Coast, starting around Virginia to Vermont.
 
 Clusters of Twitter Activity Around Bird Day
 ![Hot Spot Analysis](figures/clustersofTwitterActivityAroundBirdDay)
+
 Cluster of high activity of bird related tweets around bird day can be found on the East Coast, on the southern tip of florida, on the Louisiana coast, in Alabama and northern Indiana/ southern Michigan.
 
 ## Unplanned Deviations from the Protocol
