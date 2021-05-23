@@ -16,7 +16,10 @@ A quick study of natural disaster literature and scholarship will tell you that 
 
 ***A file with all of the sql queries can be found [here](assets/schoolVulnerabilityAnalysis.sql)***
 
-We first extracted the location of schools from Open Street Map, and then found where these schools intersected with flood zones from Resilience Academy.
+The draft of this SQL code was put together by Jacob Freedman, with some help from Kufre Udoh and Arielle Landau. The code was finalized and edited by Arielle Landau and Jacob Freedman.
+
+We first extracted the location of schools from Open Street Map, and then found where these schools intersected with flood zones from Resilience Academy. Schools queried from Open Street Map were points, schools represented as polygons were not queried. Multipoint features were not converted to single point features as our analysis was concerned with the specific school buildings at risk to flooding.
+
 ```SQL
 -- Create school layer
  CREATE TABLE schools AS
