@@ -77,6 +77,10 @@ Figure 7
 ![Flood Prone Width](assets/floodWidth.png)
 Figure 8
 
+| variable      | value   | source |
+|---------------|---------|--------|
+| bankful width | 7.32099 | champs |
+
 Table 1. Site Measurements
 Variable | Value | Source 
 -------- | ----- | ------
