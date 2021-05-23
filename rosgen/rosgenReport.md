@@ -90,17 +90,19 @@ Valley Length | 139.41m | valleyLine derived data
 Median Channel Material Particle Diameter | 50 | CHaMP 
 
 Table 2. Rosgen Level I Classification
-| Criteria | Value |
-| Entrenchment Ratio | 12.79 |
-| Width / Depth Ratio | 20.3959 |
-| Sinuosity |1.31 |
-| Level I Stream Type | C |
+Criteria | Value 
+-------- | -----
+Entrenchment Ratio | 12.79 
+Width / Depth Ratio | 20.3959 
+Sinuosity |1.31 
+Level I Stream Type | C 
 
 Table 3. Rosgen Level II Classification
-| Criteria | Value |
-| Slope | 4.956 |
-| Channel Material | Gravel |
-| Level II Stream Type | C4B, C4, or C4C |
+Criteria | Value 
+-------- | -----
+Slope | 4.956 
+Channel Material | Gravel 
+Level II Stream Type | C4B, C4, or C4C 
 
 
 ## Unplanned Deviations from the Protocol
