@@ -30,15 +30,13 @@ hospitals that weren't classified as general acute care.
 
 ![Gravity Model Workflow](assets/GravityModel.png)
 **Gravity Model Workflow**
-Additional Details: 
+Additional Details:
 * Distance Matrix allows for the additional input of k, a variable which determines the nearest number of k input features to compare to target features
 * Potential was calculated using the equation (inputWeight)^λ * (targetWeight)^α / (distance)^β
 * Spatial catchments were calculated by aggregating the sum of the input weights into the target features.
 
 After pre-processing the HSA Hospital Data was put into the gravity model as the
-target layer, with beds as the weight field. Town and population data from
-the American Community Survey 2018 5 year average was the input layer, with
-population as the weight field. The ACS [data](https://gis4dev.github.io/lessons/assets/netown.gpkg)
+target layer, with beds as the weight field. The k value was set to 20. The alpha and beta values were set to their default values of 1. Town and population data from the American Community Survey 2018 5 year average was the input layer, with population as the weight field. The ACS [data](https://gis4dev.github.io/lessons/assets/netown.gpkg)
 was put together by Joe Holler.
 
 **You can find the comparison between my gravity model of spatial interaction for
@@ -47,7 +45,7 @@ hospital service areas in New England and the Dartmouth Atlas of Health care
 
 Although there are some similarities between the output of my model and the
 Dartmouth Atlas of Health Care's geographic boundaries, there is still a lot of
-room for the accuracy of my model to be improved. However, both models find areas with limited access to healthcare, in the more rural areas of northern Maine and northern New York, showing a potentially alarming pattern of a lack of access to hospitals in rural areas. In the future, it would be interesting to see if this pattern of lack of access to hospitals in rural areas extends to other parts of the United States, or if we see similar patterns in other countries. Especially during the COVID-19 pandemic, doing a spatial interaction analysis on the location of vaccination sites would also provide an insight into communities that are currently falling below the radar but should be provided additional support, whether that be in aiding transportation to vaccination sites, or changing the locations of vaccination sites themselves. 
+room for the accuracy of my model to be improved. However, both models find areas with limited access to healthcare, in the more rural areas of northern Maine and northern New York, showing a potentially alarming pattern of a lack of access to hospitals in rural areas. In the future, it would be interesting to see if this pattern of lack of access to hospitals in rural areas extends to other parts of the United States, or if we see similar patterns in other countries. Especially during the COVID-19 pandemic, doing a spatial interaction analysis on the location of vaccination sites would also provide an insight into communities that are currently falling below the radar but should be provided additional support, whether that be in aiding transportation to vaccination sites, or changing the locations of vaccination sites themselves.
 
 **Summary of data sources:**
 * [HSA Hospital Data](https://hifld-geoplatform.opendata.arcgis.com/datasets/6ac5e325468c4cb9b905f1728d6fbf0f_0)

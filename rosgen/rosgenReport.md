@@ -15,7 +15,7 @@ and Replication by: Kasprak, A., N. Hough-Snee, T. Beechie, N. Bouwes, G. Brierl
 Replication Authors:
 Arielle Landau, Zach Hilgendorf, Joseph Holler, and Peter Kedron.
 
-Replication Materials Available at: [github repository name](github repository link)
+Replication Materials Available at: [RE-Rosgen](https://github.com/alandaux/RE-rosgen)
 
 Created: `17 March 2021`
 Revised: `24 March 2021`
@@ -54,17 +54,31 @@ The classification scheme we followed:
 
 Figures:
 ![Elevation Map](assets/elevationStudySiteMap.png)
+Figure 1
+
 ![Slope Map](assets/slopeStudySiteMap.png)
+Figure 2
+
 ![Stream Centerline](assets/streamCenterlineMap.png)
+Figure 3
+
 ![Valley Centerline](assets/valleyCenterlineMap.png)
+Figure 4
+
 ![Longitudinal Profile of Extracted Reach](assets/longProfExtracted.png)
+Figure 5
+
 ![Longitudinal Profile Slope](assets/slopeLongProfile.png)
+Figure 6
+
 ![Cross Sectional Profile](assets/crossSectionalProfile.png)
+Figure 7
+
 ![Flood Prone Width](assets/floodWidth.png)
+Figure 8
 
 Table 1. Site Measurements
 | Variable | Value | Source |
-| :-: | :-: | :-: |
 | Bankfull Width | 7.0366m | CHaMP |
 | Bankfull Depth Max |0.9116m | CHaMP |
 | Bankfull Depth Average |0.345m | CHaMP |
@@ -76,7 +90,6 @@ Table 1. Site Measurements
 
 Table 2. Rosgen Level I Classification
 | Criteria | Value |
-| :-: | :-: |
 | Entrenchment Ratio | 12.79 |
 | Width / Depth Ratio | 20.3959 |
 | Sinuosity |1.31 |
@@ -84,7 +97,6 @@ Table 2. Rosgen Level I Classification
 
 Table 3. Rosgen Level II Classification
 | Criteria | Value |
-| :-: | :-: |
 | Slope | 4.956 |
 | Channel Material | Gravel |
 | Level II Stream Type | C4B, C4, or C4C |
@@ -97,11 +109,11 @@ In order to install the required add ons in GRASS (v.centerline, v.transect, etc
 The randomly assigned location for this replication, location id 16, had multiple points recorded in the CHaMP data from different years. Attribute values were thus averaged across the three points used in the Kasprak et al. study.
 
 ## Discussion
-Kasprak et al. determined the study site (location id = 16) to be C for level I classification, and c4b for level II classification. Because the slope calculated in my replication was 4.956, much higher than the slope range in Rosgen where the highest slope is 0.039, I was unable to further classify the stream site beyond c4b, c5 or c4c for level II classification. However, I was able to replicate Kasprak's results for level I classification (stream type C).
+Kasprak et al. determined the study site (location id = 16) to be C for level I classification, and c4b for level II classification. Because the slope calculated in my replication was 4.956 (Figure 2), much higher than the slope range in Rosgen where the highest slope is 0.039, I was unable to further classify the stream site beyond c4b, c5 or c4c for level II classification. However, I was able to replicate Kasprak's results for level I classification (stream type C).
 
 The slope was large because it was calculated as the average of all slopes instead of calculating one slope from start to end. Combined with a less accurate resolution as compared to the Kasprak et al. study, error could easily have been introduced. Kasprak used 0.1m DEM resolution, while we only had access to 1m resolution. When digitizing, error was likely introduced when drawing the stream banks up and down the banks or valley sides, causing the slope to seem steeper than reality.
 
-Atypical streams often do not fit in with established categories, meaning they get more divergent results with different classification schemes. The study site is one of these streams, where in the Kasprak study there was poor agreement between the Rosgen, river styles and statistical clustering. Kasprak attributes these differences in classification because each framework takes into account physical variables at varying levels and at varying points in the classification process. Rosgen's classification scheme is often criticized because of its hierarchical approach, where what determinations come first, and the corresponding thresholds of categorization can seem arbitrary. Kasprak also noted that classification frameworks often disagreed when the channel form was largely different from the valley width. From observations when digitizing the site, the stream banks were minuscule compared to the valley width, likely explaining the disagreement among frameworks the Kasprak recorded.
+Atypical streams often do not fit in with established categories, meaning they get more divergent results with different classification schemes. The study site is one of these streams, where in the Kasprak study there was poor agreement between the Rosgen, river styles and statistical clustering. Kasprak attributes these differences in classification because each framework takes into account physical variables at varying levels and at varying points in the classification process. Rosgen's classification scheme is often criticized because of its hierarchical approach, where what determinations come first, and the corresponding thresholds of categorization can seem arbitrary. Kasprak also noted that classification frameworks often disagreed when the channel form was largely different from the valley width. From observations when digitizing the site, the stream banks were minuscule compared to the valley width, likely explaining the disagreement among frameworks the Kasprak recorded (Figure 3 and 4).
 
 ## Conclusion
 
