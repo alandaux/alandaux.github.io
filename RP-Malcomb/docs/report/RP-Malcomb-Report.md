@@ -78,15 +78,15 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 8. Weight capacity based on table 2 in Malcomb et al.
 9. Calculate capacity by summing all weighted capacity fields
 10. Joining mean capacities to TA polygon layer
-  1. Summarize capacity from households to traditional authorities
+  * Summarize capacity from households to traditional authorities
 11. Making capacity score resemble Malcomb et al's work (scores on range of 0-20) by multiplying capacity score by 20
 12. Categorizing capacities using natural jenks methods
 13. Creating blank raster and setting extent of Malawi - CRS: 4326
 14. Reproject, clip and resampling flood risk and drought exposure rasters to new extent and cell size
-  1. Uses bilinear resampling for drought to average continuous population exposure values
-  2. Uses nearest neighbor resampling for flood risk to preserve integer values
-  3. Removing factors and recasting them as integers
-  4. Clipping TAs with LZs to remove lake
+  * Uses bilinear resampling for drought to average continuous population exposure values
+  * Uses nearest neighbor resampling for flood risk to preserve integer values
+  * Removing factors and recasting them as integers
+  * Clipping TAs with LZs to remove lake
 15. Rasterizing final TA capacity layer
 16. Masking flood and drought layers
 17. Reclassify drought raster into quantiles
@@ -96,7 +96,7 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 **Workflow Version 3**:
 -add in livelihood zones procedures, also comparing our maps to the ones in malcomb et al.
 1. Data Preprocessing:
-  1. Download traditional authorities: MWI_adm2.shp
+  * Download traditional authorities: MWI_adm2.shp
 2. Adding TA and LZ ids to DHS clusters
 3. Removing HH entries with invalid or unknown values
 4. Aggregating HH data to DHA clusters, and then joining to traditional authorities to get: ta_capacity_2010
@@ -106,24 +106,24 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 8. Weight capacity based on table 2 in Malcomb et al.
 9. Calculate capacity by summing all weighted capacity fields
 10. Joining mean capacities to TA polygon layer
-  1. Summarize capacity from households to traditional authorities
+  * Summarize capacity from households to traditional authorities
 11. Making capacity score resemble Malcomb et al's work (scores on range of 0-20) by multiplying capacity score by 20
 12. Categorizing capacities using natural jenks methods
 13. Calculate livelihood sensitivity:
-  1. Pre- process livelihood data from famine early warning network livelihood zones
-    1. Disaster coping strategy: % income from selling firewood, wild foods or grasses (income from firewood + income from grasses + income from wild foods / total income * 100)
-    2. %Income from Cash Crops: (cash from crops / total income * 100)
-    3. %Food from own farm: (% of crops reported as sources of food)
-    4. %Income from wage labor: (labour etc. as source of cash / total income * 100)
-  2. Scale livelihood sensitivity fields on scale of 1 - 5 to match Malcomb et al.
-  3. Weight capacity based on table 2 in Malcomb et al.
-  4. Calculate livelihood sensitivity by summing all weighted fields
+  * Pre- process livelihood data from famine early warning network livelihood zones
+    * Disaster coping strategy: % income from selling firewood, wild foods or grasses (income from firewood + income from grasses + income from wild foods / total income * 100)
+    * %Income from Cash Crops: (cash from crops / total income * 100)
+    * %Food from own farm: (% of crops reported as sources of food)
+    * %Income from wage labor: (labour etc. as source of cash / total income * 100)
+  * Scale livelihood sensitivity fields on scale of 1 - 5 to match Malcomb et al.
+  * Weight capacity based on table 2 in Malcomb et al.
+  * Calculate livelihood sensitivity by summing all weighted fields
 14. Creating blank raster and setting extent of Malawi - CRS: 4326
 15. Reproject, clip and resampling flood risk and drought exposure rasters to new extent and cell size
-  1. Uses bilinear resampling for drought to average continuous population exposure values
-  2. Uses nearest neighbor resampling for flood risk to preserve integer values
-  3. Removing factors and recasting them as integers
-  4. Clipping TAs with LZs to remove lake
+  * Uses bilinear resampling for drought to average continuous population exposure values
+  * Uses nearest neighbor resampling for flood risk to preserve integer values
+  * Removing factors and recasting them as integers
+  * Clipping TAs with LZs to remove lake
 16. Rasterizing final TA capacity layer and final livelihood sensitivity layer
 17. Masking flood and drought layers
 18. Reclassify drought raster into quantiles
