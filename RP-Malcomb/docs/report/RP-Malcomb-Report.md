@@ -68,7 +68,7 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 
 **Workflow Version 2**
 1. Data Preprocessing:
-    1. Download traditional authorities: MWI_adm2.shp
+  1. Download traditional authorities: MWI_adm2.shp
 2. Adding TA and LZ ids to DHS clusters
 3. Removing HH entries with invalid or unknown values
 4. Aggregating HH data to DHA clusters, and then joining to traditional authorities to get: ta_capacity_2010
@@ -78,15 +78,15 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 8. Weight capacity based on table 2 in Malcomb et al.
 9. Calculate capacity by summing all weighted capacity fields
 10. Joining mean capacities to TA polygon layer
-    1. Summarize capacity from households to traditional authorities
+  1. Summarize capacity from households to traditional authorities
 11. Making capacity score resemble Malcomb et al's work (scores on range of 0-20) by multiplying capacity score by 20
 12. Categorizing capacities using natural jenks methods
 13. Creating blank raster and setting extent of Malawi - CRS: 4326
 14. Reproject, clip and resampling flood risk and drought exposure rasters to new extent and cell size
-    1. Uses bilinear resampling for drought to average continuous population exposure values
-    2. Uses nearest neighbor resampling for flood risk to preserve integer values
-    3. Removing factors and recasting them as integers
-    4. Clipping TAs with LZs to remove lake
+  1. Uses bilinear resampling for drought to average continuous population exposure values
+  2. Uses nearest neighbor resampling for flood risk to preserve integer values
+  3. Removing factors and recasting them as integers
+  4. Clipping TAs with LZs to remove lake
 15. Rasterizing final TA capacity layer
 16. Masking flood and drought layers
 17. Reclassify drought raster into quantiles
@@ -96,7 +96,7 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 **Workflow Version 3**:
 -add in livelihood zones procedures, also comparing our maps to the ones in malcomb et al.
 1. Data Preprocessing:
-    1. Download traditional authorities: MWI_adm2.shp
+  1. Download traditional authorities: MWI_adm2.shp
 2. Adding TA and LZ ids to DHS clusters
 3. Removing HH entries with invalid or unknown values
 4. Aggregating HH data to DHA clusters, and then joining to traditional authorities to get: ta_capacity_2010
@@ -106,51 +106,51 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 8. Weight capacity based on table 2 in Malcomb et al.
 9. Calculate capacity by summing all weighted capacity fields
 10. Joining mean capacities to TA polygon layer
-    1. Summarize capacity from households to traditional authorities
+  1. Summarize capacity from households to traditional authorities
 11. Making capacity score resemble Malcomb et al's work (scores on range of 0-20) by multiplying capacity score by 20
 12. Categorizing capacities using natural jenks methods
 13. Calculate livelihood sensitivity:
-    1. Pre- process livelihood data from famine early warning network livelihood zones
-        1. Disaster coping strategy: % income from selling firewood, wild foods or grasses (income from firewood + income from grasses + income from wild foods / total income * 100)
-        2. %Income from Cash Crops: (cash from crops / total income * 100)
-        3. %Food from own farm: (% of crops reported as sources of food)
-        4. %Income from wage labor: (labour etc. as source of cash / total income * 100)
-    2. Scale livelihood sensitivity fields on scale of 1 - 5 to match Malcomb et al.
-    3. Weight capacity based on table 2 in Malcomb et al.
-    4. Calculate livelihood sensitivity by summing all weighted fields
+  1. Pre- process livelihood data from famine early warning network livelihood zones
+    1. Disaster coping strategy: % income from selling firewood, wild foods or grasses (income from firewood + income from grasses + income from wild foods / total income * 100)
+    2. %Income from Cash Crops: (cash from crops / total income * 100)
+    3. %Food from own farm: (% of crops reported as sources of food)
+    4. %Income from wage labor: (labour etc. as source of cash / total income * 100)
+  2. Scale livelihood sensitivity fields on scale of 1 - 5 to match Malcomb et al.
+  3. Weight capacity based on table 2 in Malcomb et al.
+  4. Calculate livelihood sensitivity by summing all weighted fields
 14. Creating blank raster and setting extent of Malawi - CRS: 4326
 15. Reproject, clip and resampling flood risk and drought exposure rasters to new extent and cell size
-    1. Uses bilinear resampling for drought to average continuous population exposure values
-    2. Uses nearest neighbor resampling for flood risk to preserve integer values
-    3. Removing factors and recasting them as integers
-    4. Clipping TAs with LZs to remove lake
+  1. Uses bilinear resampling for drought to average continuous population exposure values
+  2. Uses nearest neighbor resampling for flood risk to preserve integer values
+  3. Removing factors and recasting them as integers
+  4. Clipping TAs with LZs to remove lake
 16. Rasterizing final TA capacity layer and final livelihood sensitivity layer
 17. Masking flood and drought layers
 18. Reclassify drought raster into quantiles
 19. Add all RASTERs together to calculate final output:  final = (40 - geo) * 0.40 + drought * 0.20 + flood * 0.20 + lhz_sensitivity * 0.20
 20. Use zonal statistics to aggregate raster to TA geometry for final calculation of vulnerability in each traditional authority
 
-## reproduction Results
+## Reproduction Results
 
-**Adaptive Capacity by Traditional Authority**
+**Figure 1: Adaptive Capacity by Traditional Authority**
 ![Adaptive Capacity by Traditional Authority](figures/ac_2010.png)
 
-**Difference in Reproduction and Original Study for Adaptive Capacity**
+**Figure 2: Difference in Reproduction and Original Study for Adaptive Capacity**
 ![Adaptive Capacity Difference](figures/ACDiff.png)
 
-**Confusion Matrix for Adaptive Capacity**
+**Figure 3: Confusion Matrix for Adaptive Capacity**
 ![Confusion Matrix](figures/confusionMatrix.png)
 
 The difference between the reproduction of adaptive capacity by traditional authority, and that of the original study was calculated using Spearman's Rho. Spearman's Rho calculates the correlation of ranked data with the assumption that there is no correlation (the null hypothesis). A value of 0 means no correlation, -1 designates an inverse correlation, and 1 designates a positive correlation. The Spearman's Rho for the comparison between our adaptive capacity map and Malcomb's resilience map was 0.7795965, indicating a somewhat strong positive correlation.
 
-**Map of Vulnerability in Malawi**
+**Figure 4: Map of Vulnerability in Malawi**
 ![Map of Vulnerability in Malawi](figures/vulnerability.png)
 
 A scatterplot comparing raster values between the reproduction and original study vulnerability maps similar indicates a weak correlation.
 ![Scatterplot](figures/fig5DiffScatterplot.png)
 
 
-**Difference in Reproduction and Original Study for Vulnerability**
+**Figure 5: Difference in Reproduction and Original Study for Vulnerability**
 ![Vulnerability Difference](figures/VulDiff.png)
 
 The difference between our reproduction of vulnerability in Malawi and that of the original study was similarly calculated using Spearman's Rho. The Spearman's Rho for this comparison was 0.271046, indicating a weak positive correlation between our vulnerability map and Malcomb's.
