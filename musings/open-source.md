@@ -30,10 +30,9 @@ with tenants discussed among the group could be one way to agree upon our own
 values of open source GIScience. For example, although the MIT license requires
 use of its code to also follow the guidelines of the MIT license, there are not
 rules on providing credit to previous programmers or contributors. Because
-Middlebury has requirements for giving students letter grades, which are often
-derived in some way from class participation, including rules in our class
-where we give credit where credit is due is more in line with how grading at
-Middlebury usually works. GitHub makes it easy to add collaborators to code,
+Middlebury has requirements for giving students letter grades often
+based on class participating, we should give credit where credit is due. GitHub
+makes it easy to add collaborators to code,
 or to potentially assign ourselves to any "issues" that we have worked on to
 keep track of who has worked on what. In this way, we would be following
 the values of the open source GIScience movement, but would also remain in
