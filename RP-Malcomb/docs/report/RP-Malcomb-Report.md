@@ -68,7 +68,7 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 
 **Workflow Version 2**
 1. Data Preprocessing:
-  1. Download traditional authorities: MWI_adm2.shp
+  * Download traditional authorities: MWI_adm2.shp
 2. Adding TA and LZ ids to DHS clusters
 3. Removing HH entries with invalid or unknown values
 4. Aggregating HH data to DHA clusters, and then joining to traditional authorities to get: ta_capacity_2010
