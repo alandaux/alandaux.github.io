@@ -50,8 +50,8 @@ In order to find bird related tweets in and around Bird Day on May 4th, the foll
     "birdday OR birding OR birds OR (bird AND spring) OR (bird AND migration)"
 Using the word "bird" on its own was eliminated from the query in order to avoid the many tweets where men refer to their significant others as "my bird" (the slang meaning of bird). After cleaning the data to tweets that included geographic information, 1347 tweets remained. 200,000 tweets were also fetched using the twitter API in order to normalize the data when calculating the normalized difference between tweets index. The normalized difference between tweets index = (tweets about birds – baseline twitter activity) / (tweets about birds + baseline twitter activity).
 
-The bird related tweets are available [here](figures/birding.RDS)
-The May baseline tweets are available [here](figures/mayTweets.RDS)
+The bird related tweets are available [here](figures/birdingIDs.RDS)
+The May baseline tweets are available [here](figures/mayIDs.RDS)
 
 The temporal analysis was conducted by first grouping the twitter data by hour and then graphing the results with ts_plot.
 ```
