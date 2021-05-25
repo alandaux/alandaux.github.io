@@ -4,7 +4,7 @@ title: RP - Rapidly measuring spatial accessibility of COVID-19 healthcare resou
 ---
 
 
-**Reproduction of**
+**Replication of**
 # Rapidly measuring spatial accessibility of COVID-19 healthcare resources: a case study of Illinois, USA.
 
 Original study *by* Kang, J. Y., A. Michels, F. Lyu, Shaohua Wang, N. Agbodo, V. L. Freeman, and Shaowen Wang. 2020. Rapidly measuring spatial accessibility of COVID-19 healthcare resources: a case study of Illinois, USA.

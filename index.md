@@ -66,5 +66,6 @@ Computer Programs:
 - [Analysis of Resilience of Schools to Flooding in Dar es Salaam](DarEsSalaamResilienceAcademy/report.md)
 - [Reproduction of Vulnerability Modeling for Sub-Saharan Africa](RP-Malcomb/docs/report/RP-Malcomb-Report.md)
 - [Spatial-temporal and content analysis of Twitter Data](RE-Dorian/docs/RE-Dorian-Report.md)
+- [Replication of Rapidly measuring spatial accessibility of COVID-19 healthcare resources](RP-Kang/report.md)
 
 ## [Musings](/musings)

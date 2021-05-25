@@ -3,9 +3,7 @@ layout: page
 title: RP- Vulnerability modeling for sub-Saharan Africa
 ---
 
-
-**Reproduction of**
-# Vulnerability modeling for sub-Saharan Africa
+# Reproduction of Vulnerability modeling for sub-Saharan Africa
 
 Original study *by* Malcomb, D. W., E. A. Weaver, and A. R. Krakowka. 2014. Vulnerability modeling for sub-Saharan Africa: An operationalized approach in Malawi. *Applied Geography* 48:17–30. DOI:[10.1016/j.apgeog.2014.01.004](https://doi.org/10.1016/j.apgeog.2014.01.004)
 
@@ -129,6 +127,9 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 18. Reclassify drought raster into quantiles
 19. Add all RASTERs together to calculate final output:  final = (40 - geo) * 0.40 + drought * 0.20 + flood * 0.20 + lhz_sensitivity * 0.20
 20. Use zonal statistics to aggregate raster to TA geometry for final calculation of vulnerability in each traditional authority
+21. Analyze difference between original study and the reproduction
+  * Compare fig 4 from Malcomb et al. to our adaptive capacity results (discrete chloropleth maps) through Spearman's Rho correlation test
+  * Compare fig 5 from Malcomb et al. to our vulnerability results (continuous rasters) through Spearman's Rho correlation test 
 
 ## Reproduction Results
 
@@ -137,23 +138,26 @@ Data Input: UNEP/grid Europe, Famine early warning network → ***Raster*** → 
 
 **Figure 2: Difference in Reproduction and Original Study for Adaptive Capacity**
 ![Adaptive Capacity Difference](figures/ACDiff.png)
+Figure 2 represents the difference between digitized results from Malcomb et al., and our reproduction.
 
 **Figure 3: Confusion Matrix for Adaptive Capacity**
 ![Confusion Matrix](figures/confusionMatrix.png)
 
-The difference between the reproduction of adaptive capacity by traditional authority, and that of the original study was calculated using Spearman's Rho. Spearman's Rho calculates the correlation of ranked data with the assumption that there is no correlation (the null hypothesis). A value of 0 means no correlation, -1 designates an inverse correlation, and 1 designates a positive correlation. The Spearman's Rho for the comparison between our adaptive capacity map and Malcomb's resilience map was 0.7795965, indicating a somewhat strong positive correlation.
+The difference between the reproduction of adaptive capacity by traditional authority, and that of the original study (Figure 2) was calculated using Spearman's Rho. Spearman's Rho calculates the correlation of ranked data with the assumption that there is no correlation (the null hypothesis). A value of 0 means no correlation, -1 designates an inverse correlation, and 1 designates a positive correlation. The Spearman's Rho for the comparison between our adaptive capacity map and Malcomb's resilience map was 0.7795965, indicating a somewhat strong positive correlation.
 
 **Figure 4: Map of Vulnerability in Malawi**
 ![Map of Vulnerability in Malawi](figures/vulnerability.png)
+Figure 4 is a result of our reproduction calculating vulnerability in Malawi.
 
-A scatterplot comparing raster values between the reproduction and original study vulnerability maps similar indicates a weak correlation.
+A scatterplot comparing raster values between the reproduction and original study vulnerability maps similarly indicates a weak correlation.
 ![Scatterplot](figures/fig5DiffScatterplot.png)
 
 
 **Figure 5: Difference in Reproduction and Original Study for Vulnerability**
 ![Vulnerability Difference](figures/VulDiff.png)
+Figure 5 represents the difference between digitized results from Malcomb et al., and our reproduction.
 
-The difference between our reproduction of vulnerability in Malawi and that of the original study was similarly calculated using Spearman's Rho. The Spearman's Rho for this comparison was 0.271046, indicating a weak positive correlation between our vulnerability map and Malcomb's.
+The difference between our reproduction of vulnerability in Malawi and that of the original study was similarly calculated using Spearman's Rho (Figure 5). The Spearman's Rho for this comparison was 0.271046, indicating a weak positive correlation between our vulnerability map and Malcomb's.
 
 Overall, the adaptive capacity map was supported by the reproduction, but the vulnerability map was not supported by the reproduction.
 
@@ -173,7 +177,7 @@ The lack of detail in Malcomb et al. on how livelihood sensitivity was calculate
 
 As no code was published in Malcomb et al., the entire workflow is uncertain as there is no clarification in how data was scaled, weighted and at what level any kind of aggregation or calculations occurred. Making the code available for their statistical analysis would go a long way in clarifying decisions that did not seem important to include in a methods section, but become incredibly relevant when trying to produce a successful reproduction.
 
-Our reproduction also sheds light on larger debates in the field of geography on issues of error and uncertainty. Longley (2008) introduces a model for thinking about error and uncertainty in spatial research where error and uncertainty is introduced at each step of spatial analysis. This process is represented in a timeline where error and uncertainty is introduced at every step: real world --> conception --> measurement & representation --> analysis --> interpretation and validation. Every step takes us further and further away from an accurate representation of the real world. The problem with Malcomb et al. is that we do not even know the details of how they went from their data sources to their meta-themes of measuring vulnerability, to how they analyzed data to fit their categories of resilience. We know there is uncertainty inherent in this process, but the lack of detail on their process of spatial analysis means we cannot estimate or discuss what kind of uncertainty was introduced, or how it was introduced. Tate (2013) also provides a helpful framework in thinking about vulnerability model and uncertainty. Tate (2013) outlines decisions in each phase of modeling that could introduce uncertainty in models. However, there are several points in decision making for a model that are completely ignored by Malcomb et al. There is no decision made on how to measure error, and there is also no phase of the model where Malcomb et al. conduct an uncertainty or sensitivity analysis, or validate their findings in any way. There is thus no way for us to estimate how much uncertainty was introduced by Malcomb et al. in their decision. We have no idea how much their choices mattered for the final result.
+Our reproduction also sheds light on larger debates in the field of geography on issues of error and uncertainty. Longley (2008) introduces a model for thinking about error and uncertainty in spatial research where error and uncertainty is introduced at each step of spatial analysis. This process is represented in a timeline where error and uncertainty is introduced at every step: real world --> conception --> measurement & representation --> analysis --> interpretation and validation. Every step takes us further and further away from an accurate representation of the real world. The problem with Malcomb et al. is that we do not even know the details of how they went from their data sources to their meta-themes of measuring vulnerability, to how they analyzed data to fit their categories of resilience. We know there is uncertainty inherent in this process, but the lack of detail on their process of spatial analysis means we cannot estimate or discuss what kind of uncertainty was introduced, or how it was introduced. Tate (2013) also provides a helpful framework in thinking about vulnerability model and uncertainty. Tate (2013) outlines decisions in each phase of modeling that could introduce uncertainty in models. However, there are several points in decision making for a model that are completely ignored by Malcomb et al. There is no decision made on how to measure error, and there is also no phase of the model where Malcomb et al. conduct an uncertainty or sensitivity analysis, or validate their findings in any way. There is thus no way for us to estimate how much uncertainty was introduced by Malcomb et al. in their decision. We have no idea how much their choices mattered for the final result. However, now that we have created a complete R script for their analysis, we now have the capacity to test sensitivity in their model in the future.
 
 ## Conclusion
 
