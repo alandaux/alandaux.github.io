@@ -17,7 +17,7 @@ Arielle Landau
 Replication Materials Available at: [RE-dorian](https://github.com/alandaux/RE-Dorian)
 
 Created: `4/4/2021`
-Revised: `4/1/2021`
+Revised: `5/25/2021`
 
 ## Abstract
 
@@ -35,11 +35,11 @@ In this replication study, I will look at tweets surrounding Bird Day on May 4th
 
 ## Original Study Information
 
-Wang et al. (2016) studied wildfire related tweets through a spatial and temporal analysis, as well as a network analysis. Three main analytical techniques were used: kernal density estimation, text mining and social network analysis.Kernal density estimation was used to create a map of wildfire related tweets, taking coordinates of tweets and exporting a raster with a value representing the number of tweets for an area. Further, a dual kernel density estimation was used to visualize tweet locations for two specific fires. Text mining was used to identify important terms used in wildfire related tweets (using the “tm” package in R 3.12), and social network analysis was used to understand the behavior of users communicating about wildfires through retweets (using a k-mean clustering method through the R package “igraph”). Results showing the number of tweets over time were displayed using bar charts, while the spatial distribution of wildfire tweets (displayed using different sized centroids), and the kernal density analyses were visualized through maps (displayed using a heat map). Term frequency was visualized using a bar chart as well. Term cluster results were displayed in a table and the distribution of the retweet network was visualized in line graphs. The retweet network was visualized in a node diagram where nodes were drawn between users when one retweeted another.
+Wang et al. (2016) studied wildfire related tweets through a spatial and temporal analysis, as well as a network analysis. Three main analytical techniques were used: kernel density estimation, text mining and social network analysis. Kernel density estimation was used to create a map of wildfire related tweets, taking coordinates of tweets and exporting a raster with a value representing the number of tweets for an area. Further, a dual kernel density estimation was used to visualize tweet locations for two specific fires. Text mining was used to identify important terms used in wildfire related tweets (using the “tm” package in R 3.12), and social network analysis was used to understand the behavior of users communicating about wildfires through retweets (using a k-mean clustering method through the R package “igraph”). Results showing the number of tweets over time were displayed using bar charts, while the spatial distribution of wildfire tweets (displayed using different sized centroids), and the kernel density analyses were visualized through maps (displayed using a heat map). Term frequency was visualized using a bar chart as well. Term cluster results were displayed in a table and the distribution of the retweet network was visualized in line graphs. The retweet network was visualized in a node diagram where nodes were drawn between users when one retweeted another.
 
 Holler (2021) loosely replicated the methods of Wang et al (2016) for the case of Hurricane Dorian's landfall on the U.S. mainland during the 2019 Atlantic Hurricane season. Data was based on Twitter Search API queries for the keywords hurricane, Dorian or sharpiegate.
 
-Holler modified Wang et al's methods by not searching for retweets for network analysis, focusing instead on original Tweet content with keywords hurricane, Dorian, or sharpiegate (a trending hashtag referring to the storm). Holler modified the methodology for normalizing tweet data by creating a normalized Tweet difference index and extended teh methodology to test for spatial clustering with the local Getis-Ord statistic. The study tested a hypothesis that false narratives of hurricane risk promulgated at the highest levels of the United States government would significantly distort the geographic distribution of Twitter activity related to the hurricane and its impacts, finding that original Twitter data still clustered only in the affected areas of the Atlantic coast in spite of false narratives about risk of a westward track through Alabama.
+Holler modified Wang et al's methods by not searching for retweets for network analysis, focusing instead on original Tweet content with keywords hurricane, Dorian, or sharpiegate (a trending hashtag referring to the storm). Holler modified the methodology for normalizing tweet data by creating a normalized Tweet difference index and extended the methodology to test for spatial clustering with the local Getis-Ord statistic. The study tested a hypothesis that false narratives of hurricane risk promulgated at the highest levels of the United States government would significantly distort the geographic distribution of Twitter activity related to the hurricane and its impacts, finding that original Twitter data still clustered only in the affected areas of the Atlantic coast in spite of false narratives about risk of a westward track through Alabama.
 
 Wang et al (2016) conducted their study using the `tm` and `igraph` packages in `R 3.1.2`.
 The replication study by Holler (2021) used R, including the rtweet, rehydratoR, igraph, sf, and spdep packages for analysis.
@@ -50,8 +50,8 @@ In order to find bird related tweets in and around Bird Day on May 4th, the foll
     "birdday OR birding OR birds OR (bird AND spring) OR (bird AND migration)"
 Using the word "bird" on its own was eliminated from the query in order to avoid the many tweets where men refer to their significant others as "my bird" (the slang meaning of bird). After cleaning the data to tweets that included geographic information, 1347 tweets remained. 200,000 tweets were also fetched using the twitter API in order to normalize the data when calculating the normalized difference between tweets index. The normalized difference between tweets index = (tweets about birds – baseline twitter activity) / (tweets about birds + baseline twitter activity).
 
-The bird related tweets are available [here](data/derived/public/birding.RDS)
-The May baseline tweets are available [here](data/derived/public/mayTweets.RDS)
+The bird related tweets are available [here](figures/birding.RDS)
+The May baseline tweets are available [here](figures/mayTweets.RDS)
 
 The temporal analysis was conducted by first grouping the twitter data by hour and then graphing the results with ts_plot.
 ```
@@ -69,34 +69,34 @@ The contextual analysis was conducted by first cleaning up the twitter content t
 
 The spatial clustering analysis was conducted by first joining counties to each tweet, and then by grouping tweets by county to count the numebr of tweets in each county. The counts of tweets in each county was then joined back to the original county data. The same steps were done for the May baseline tweets. Threshold distance was then calculated on the counties to create a weight matrix of neighbor objects. Then a Getis Ord statistic was used to calculate hot and cold spots.
 
-Specific code for my analysis can be found [here](procedure/code/Birding Analysis Code)
+Specific code for my analysis can be found [here](https://github.com/alandaux/RE-Dorian/tree/main/procedure/code)
 
 ## Replication Results
 
-Temporal Analysis of Bird Related Tweets
+**Figure 1: Temporal Analysis of Bird Related Tweets**
 ![Temporal Analysis](figures/birdsbyhour)
 
-There is a general pattern of the number of bird related tweets rising in the morning. Notably, there is a spike of bird related tweets on April 30th.
+There is a general pattern of the number of bird related tweets rising in the morning (Figure 1). Notably, there is a spike of bird related tweets on April 30th.
 
-Count of Unique Words found in Bird Related Tweets
+**Figure 2: Count of Unique Words found in Bird Related Tweets**
 ![Unique words](figures/birdUniqueWords)
 
-The most common word found in bird related tweets was morning, corresponding to the spike of bird related tweets seen in the morning hours in the temporal analysis.
+The most common word found in bird related tweets was morning, corresponding to the spike of bird related tweets seen in the morning hours in the temporal analysis (Figure 2).
 
-Word Network of Bird Tweets around Bird Day
+**Figure 3: Word Network of Bird Tweets around Bird Day**
 ![Word Network of Birds](figures/wordNetworkofBirdTweets)
 
-The word network of tweets from the contextual analysis begins to show where there are strong birding communities, such as those around central park.
+The word network of tweets from the contextual analysis begins to show where there are strong birding communities, such as those around central park (Figure 3).
 
-Tweet Locations Around Bird Day
+**Figure 4: Tweet Locations Around Bird Day**
 ![Bird Twitter Activity](figures/tweetLocationsAroundBirdDay)
 
-Locations of bird related tweets are pretty sporadic, but there seems to be higher numbers of tweets along the East Coast, starting around Virginia to Vermont.
+Locations of bird related tweets are pretty sporadic, but there seems to be higher numbers of tweets along the East Coast, starting around Virginia to Vermont (Figure 4).
 
-Clusters of Twitter Activity Around Bird Day
+**Figure 5: Clusters of Twitter Activity Around Bird Day**
 ![Hot Spot Analysis](figures/clustersofTwitterActivityAroundBirdDay)
 
-Cluster of high activity of bird related tweets around bird day can be found on the East Coast, on the southern tip of florida, on the Louisiana coast, in Alabama and northern Indiana/ southern Michigan.
+Clusters of high activity of bird related tweets around bird day can be found on the East Coast, on the southern tip of Florida, on the Louisiana coast, in Alabama and northern Indiana/ southern Michigan (Figure 5).
 
 ## Unplanned Deviations from the Protocol
 
@@ -109,14 +109,14 @@ For the the spatial clustering analysis, the original plan was to use database q
 
 ## Discussion
 
-For both Wang et al. (2016) and Holler (2021), the working hypothesis was that tweets are not random, but are actually clustered. For my analysis, there was an exploratory hypothesis as well as a working hypothesis. The exploratory hypothesis was to see if twitter could be a used for volunteered geographic information about bird locations in the same way that ebird is. The working hypothesis was the same as Wang and Holler that tweets are not random but are clustered. My analysis found clusters of tweets, where there were areas of low and high activity similar to that of Wang and Holler. However, unlike Wang and Holler, which were centered around the analysis of one geospatial event, wildfires in Califronia, and Hurricane Dorian, respectively, my analysis on bird related tweets around Bird Day did not center around one geospatial event. With only 1347 bird related tweets that included geographic information, twitter does not match up to ebird as a source of volunteered geographic information about bird locations.
+For both Wang et al. (2016) and Holler (2021), the working hypothesis was that tweets are not random, but are actually clustered. For my analysis, there was an exploratory hypothesis as well as a working hypothesis. The exploratory hypothesis was to see if twitter could be a used for volunteered geographic information about bird locations in the same way that ebird is. The working hypothesis was the same as Wang and Holler that tweets are not random but are clustered. My analysis found clusters of tweets, where there were areas of low and high activity similar to that of Wang and Holler. However, unlike Wang and Holler, which were centered around the analysis of one geospatial event, wildfires in California, and Hurricane Dorian, respectively, my analysis on bird related tweets around Bird Day did not center around one geospatial event. With only 1347 bird related tweets that included geographic information, twitter does not match up to ebird as a source of volunteered geographic information about bird locations.
 
 On April 30th there was a spike in bird related tweets, likely because April 30th was world migratory bird day. There was also a pattern of bird related tweets increasing in the morning, which corresponded to morning having the greatest word frequency. The contextual analysis also revealed prominent bird communities, such as central park. Similar to Wang et al. where opinion leaders were identified as mostly media outlets, my analysis also found opinion leaders in more official twitter accounts such as sibirdsclub and wwfscotland. Spatial clustering was much less concentrated than in Wang's and Holler's results as my search query did not focus on one geospatial event. However, the number of clusters around large bodies of water, mostly the ocean, shows a pattern of bird watchers concentrated on spaces where one is likely to see large numbers of migratory birds.
 
 
 ## Conclusion
 
-Like Wang and Holler, my analysis found clustering of tweets, indicating that tweets are not random. Moreover, my analysis found a spike in twitter activity on World Migratory Bird Day, and saw more hot spots of twitter activity along coastlines, where one is more likely to see migratory birds. My analysis also found increase in bird related tweet activity in the mornings, and was also able to identify birding communities, such as those around central park. Future analysis could be done on other outdoor related hobbies to understand the dynamics of volunteered geographic information for hobbies such as fishing, hunting or boating. 
+Like Wang and Holler, my analysis found clustering of tweets, indicating that tweets are not random. Moreover, my analysis found a spike in twitter activity on World Migratory Bird Day, and saw more hot spots of twitter activity along coastlines, where one is more likely to see migratory birds. My analysis also found increase in bird related tweet activity in the mornings, and was also able to identify birding communities, such as those around central park. Future analysis could be done on other outdoor related hobbies to understand the dynamics of volunteered geographic information for hobbies such as fishing, hunting or boating.
 
 ## References
 
