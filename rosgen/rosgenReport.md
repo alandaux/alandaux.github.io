@@ -77,10 +77,10 @@ Figure 7
 ![Flood Prone Width](assets/floodWidth.png)
 Figure 8
 
-
 Table 1. Site Measurements
+
 | Variable                                  | Value   | Source                  |
-|-------------------------------------------|---------|-------------------------|
+|:---:|---------|-------------------------|
 | Bankfull Width                            | 7.0366m | CHaMP                   |
 | Bankfull Depth Max                        | 0.9116m | CHaMP                   |
 | Bankfull Depth Average                    | 0.345m  | CHaMP                   |
@@ -90,8 +90,9 @@ Table 1. Site Measurements
 | Valley Length                             | 139.41m | valleyLine derived data |
 | Median Channel Material Particle Diameter | 50      | CHaMP                   | 
 
-<br>
+<br> 
 Table 2. Rosgen Level I Classification
+
 | Critera             | Value   |
 |---------------------|---------|
 | Entrenchment Ratio  | 12.79   |
@@ -99,8 +100,9 @@ Table 2. Rosgen Level I Classification
 | Sinuosity           | 1.31    |
 | Level I Stream Type | C       |
 
-<br>
+<br> 
 Table 3. Rosgen Level II Classification
+
 | Critera              | Value           |
 |----------------------|-----------------|
 | Slope                | 4.956           |
