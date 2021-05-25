@@ -90,6 +90,7 @@ Table 1. Site Measurements
 | Valley Length                             | 139.41m | valleyLine derived data |
 | Median Channel Material Particle Diameter | 50      | CHaMP                   | 
 
+<br>
 Table 2. Rosgen Level I Classification
 | Critera             | Value   |
 |---------------------|---------|
@@ -98,6 +99,7 @@ Table 2. Rosgen Level I Classification
 | Sinuosity           | 1.31    |
 | Level I Stream Type | C       |
 
+<br>
 Table 3. Rosgen Level II Classification
 | Critera              | Value           |
 |----------------------|-----------------|
