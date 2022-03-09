@@ -22,7 +22,7 @@ layout: default
 
 ## Publications
 - Map featured in [Women Defending Our Earth: Honouring martyred Filipina environmental defenders on International Women’s Day] by Dalena Tran(https://theecologist.org/2022/mar/08/women-defending-our-earth)
-![WED](killedDefendersPhilippines.png)
+![WED](assets/killedDefendersPhilippines.png)
 - [Nuclear Testing in Newe Segobia, Western Shoshone Lands, Nevada, US](https://ejatlas.org/conflict/nuclear-testing-in-newe-segobia-western-shoshone-lands-in-nevada-us)
 
 ## Skills
