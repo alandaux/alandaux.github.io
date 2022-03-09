@@ -3,9 +3,7 @@ title: Main Page
 layout: default
 ---
 
-## BOLD Women's Leadership Fellow at the Environmental Justice Atlas
-
-## I studied Environmental Justice and Computer Science at Middlebury College so I could use computer algorithms and Geographic Information Systems (GIS) to advance goals of social and environmental justice. I currently pursue this work at the Environmental Justice Atlas, where I partner with researchers to visualize and analyze data, conduct geospatial analyses and produce elegant, informative maps for various research projects.
+### I studied Environmental Justice and Computer Science at Middlebury College so I could use computer algorithms and Geographic Information Systems (GIS) to advance goals of social and environmental justice. I currently pursue this work at the Environmental Justice Atlas, where I partner with researchers to visualize and analyze data, conduct geospatial analyses and produce elegant, informative maps for various research projects.
 
 ## [LinkedIn](https://www.linkedin.com/in/arielle-landau-8374091bb)
 
