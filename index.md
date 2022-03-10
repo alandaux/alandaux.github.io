@@ -31,7 +31,7 @@ layout: default
 | Github Desktop | Data Structures |
 | Visual Studio Code | Human Geography with GIS |
 
-## Project Portfolios
+## Geospatial and Cartographic Project Portfolios
 - [Cartographic Work for Environmental Justice](assets/EJMapPortfolio2022.pdf)
 - Senior Thesis: [A Uniquely Destructive Injustice: US Nuclear Testing on Indigenous Lands - an Environmental Justice and GIS Analysis](assets/A Uniquely Destructive Injustice - Final Draft.pdf)
     - Tldr: After many hours of searching through thousands of pages of declassified documents from the US Atomic Energy Agency, combined with geospatial analysis, this work exposed and visualized the unjust exposure of indigenous people in the Southwest of the US and in the Marshall Islands to radioactive fallout at the hands of the US government.
