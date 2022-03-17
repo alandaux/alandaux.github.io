@@ -26,7 +26,7 @@ layout: default
 | QGIS | Software Development |
 | ArcGIS | OOP & GUI Development |
 | Adobe Illustrator | Open Source GIS Science |
-| Tableau | Cartography - Visualizing Our Future |
+| Tableau and MapBox | Cartography - Visualizing Our Future |
 | R. Studio | Computer Architecture |
 | Github Desktop | Data Structures |
 | Visual Studio Code | Human Geography with GIS |
