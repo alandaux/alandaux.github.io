@@ -1,0 +1,10 @@
+<ul class="links">
+  <li class="{% if page.url == "/" %} active {% endif %}"><a href="{{ "/" | absolute_url }}">About Me</a></li>
+  <li class="{% if page.url contains '/skills/' %} active {% endif %}"><a href="{{ "/skills/" | absolute_url }}">Skills</a></li>
+  <li class="{% if page.url contains '/portfolio/' %} active {% endif %}"><a href="{{ "/portfolio/" | absolute_url }}">Cartographic and GIS Portfolio</a></li>
+  <li class="{% if page.url contains '/cases/' %} active {% endif %}"><a href="{{ "/cases/" | absolute_url }}">Writings on Environmental Justice</a></li>
+</ul>
+
+<ul class="icons">
+  <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+</ul>
