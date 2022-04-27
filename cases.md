@@ -2,6 +2,11 @@
 layout: page
 title: Cases Written for the Environmental Justice Atlas
 ---
+Reports:
+
+[An Environmental Justice Analysis of Protected Areas in Connecticut](Landau_CTEJReport.pdf)
+
+
 | Primary Author | |
 | -------------- | -------------- |
 | [Nuclear Testing in Newe Segobia, Western Shoshone Lands, Nevada, US](https://ejatlas.org/conflict/nuclear-testing-in-newe-segobia-western-shoshone-lands-in-nevada-us)  | The United States tested nuclear weapons on the traditional homelands of the Western Shoshone from 1951 to 1992. Nuclear weapons testing is particularly destructive because of the resulting proliferation of nuclear fallout. |
