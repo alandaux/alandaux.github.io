@@ -2,7 +2,18 @@
 layout: page
 title: Cases Written for the Environmental Justice Atlas
 ---
-Reports:
+**Upcoming Publications:**
+
+_Cultural Values and Environmental Justice Conlicts_
+Ksenija Hanaček, Dalena Tran, Arielle Landau, Teresa Sanz, Joan Martinez-Alier, May Aye Thiri, Mariana Walter, Grettel Navas, Eleonora Fanari, Juan Liu
+
+_Extractive projects along the Polar Silk Road: Implications for environmental justice conflicts in the Arctic region._
+Ksenija Hanaček, Markus Kröger, Arielle Landau1, Joan Martinez-Alier.
+
+_Killing, in the name of business profit: environmental defenders, local elites, and transnational corporations in Central Americ_
+Grettel Navas, Francisco Robles-Rivera, Ximena Alvarenga Fournier, Arielle Landau
+
+**Reports:**
 
 [An Environmental Justice Analysis of Protected Areas in Connecticut](Landau_CTEJReport.pdf)
 

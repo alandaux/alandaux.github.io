@@ -8,6 +8,8 @@ image: "/images/neweSegobia.png"
 
 <a href= '#' class="image main"><img src="{{ "/images/neweSegobia.png" }}" alt="" /></a>
 
+<a href= '#' class="image main"><img src="{{ "/images/CastleBravo-01.png" }}" alt="" /></a>
+
 Read my whole thesis [here](/images/A Uniquely Destructive Injustice - Final Draft.pdf)
 
 Tldr: After many hours of searching through thousands of pages of declassified documents from the US Atomic Energy Agency, combined with geospatial analysis, this work exposed and visualized the unjust exposure of indigenous people in the Southwest of the US and in the Marshall Islands to radioactive fallout at the hands of the US government.
