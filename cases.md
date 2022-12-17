@@ -15,7 +15,7 @@ Grettel Navas, Francisco Robles-Rivera, Ximena Alvarenga Fournier, Arielle Landa
 
 **Reports:**
 
-[An Environmental Justice Analysis of Protected Areas in Connecticut](Landau_CTEJReport.pdf)
+[An Environmental Justice Analysis of Protected Areas in Connecticut](assets/Landau_CTEJReport.pdf)
 
 
 | Primary Author | |

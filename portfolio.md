@@ -33,6 +33,10 @@ sitemap:
         <!-- Break -->
         <div class="4u"><a href="/portfolioPages/camberville/" span class="image fit">
             <img src="{{ "/images/BIPOCCamberville.jpg" }}" alt="" /></a></div>
+        <div class="4u"><a href="/portfolioPages/Yucatan/" span class="image fit">
+            <img src="{{ "/images/digitizedMapYucatan.png" }}" alt="" /></a></div>
+        <div class="4u"><a href="/portfolioPages/CFPP/" span class="image fit">
+            <img src="{{ "/images/CFPPIndonesia.png" }}" alt="" /></a></div>
     </div>
 </div>
 
